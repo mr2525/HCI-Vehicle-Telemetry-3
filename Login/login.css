@@ -1,0 +1,37 @@
+.login {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.login .overlap-wrapper {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 1512px;
+    height: 982px;
+}
+
+.login .text-wrapper {
+    position: absolute;
+    width: 609px;
+    top: 885px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 56px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.login .background-image {
+    position: absolute;
+    width: 1512px;
+    height: 982px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
