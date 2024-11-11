@@ -7,7 +7,6 @@
   </head>
   <body>
     <div class="regional-manager">
-      <div class="div">
         <div class="top-banner">
           <div class="overlap-group">
             <div class="purple"></div>
@@ -145,32 +144,95 @@
               <p class="p">Search by Vehicle ID #</p>
             </div>
           </div>
+          
           <div class="station-filter">
-            <div class="overlap-11">
-              <div class="station-filter-box"></div>
-              <img class="vector" src="img/vector-2.svg" />
-              <div class="text-wrapper-18">Eastern</div>
+            <div class="station-filter-box">
+              <label for="region">Region</label>
+              <select id="region" name="region">
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="west">West</option>
+              </select>
             </div>
-          </div>
+          
+            <div class="station-filter-box">
+              <label for="district">District</label>
+              <select id="district" name="district">
+                <!-- District options will be populated based on region -->
+              </select>
+            </div>
+          
+            <div class="station-filter-box">
+              <label for="state">State</label>
+              <select id="state" name="state">
+                <!-- State options will be populated based on district -->
+              </select>
+            </div>
+          
+            <div class="station-filter-box">
+              <label for="station">Station</label>
+              <select id="station" name="station">
+                <!-- Station options will be populated based on state -->
+              </select>
+            </div>
+          </div>          
+          
         </div>
         <div class="filter-options">
           <div class="filter-options-2">
             <div class="date-drop-down">
-              <div class="overlap-group-4">
-                <img class="drop-down-icon" src="img/drop-down-icon-2.svg" />
-                <div class="text-wrapper-19">Date</div>
+              <!-- Button to show the date picker -->
+              <button type="button" id="date-toggle-btn" class="date-toggle-btn">Select Date Range</button>
+        
+              <!-- Hidden date inputs (initially hidden) -->
+              <div id="date-range-container" class="date-range-container" style="display: none;">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" class="date-input" />
+        
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" class="date-input" />
               </div>
             </div>
             <div class="station-drop-down">
-              <div class="overlap-12">
-                <img class="drop-down-icon" src="img/drop-down-icon.svg" />
-                <div class="text-wrapper-19">Station</div>
-              </div>
+              <button type="button" id="station-toggle-btn" class="station-toggle-btn">Select Station</button>
+              <select id="station" name="station" class="station-dropdown" style="display:none;">
+                <option value="" disabled selected>Select Station</option>
+                <option value="Eastern">Eastern</option>
+                <option value="Western">Western</option>
+                <!-- Add more station options here -->
+              </select>
             </div>
-            <img class="vector-2" src="img/vector.svg" />
           </div>
         </div>
-      </div>
+        <script>
+          // Wait for the DOM to be fully loaded
+          document.addEventListener('DOMContentLoaded', () => {
+            const dateToggleButton = document.getElementById('date-toggle-btn');
+            const dateRangeContainer = document.getElementById('date-range-container');
+      
+            // Add event listener to the button to toggle visibility
+            dateToggleButton.addEventListener('click', () => {
+              // Toggle visibility of the date range container
+              if (dateRangeContainer.style.display === 'none') {
+                dateRangeContainer.style.display = 'block'; // Show the date inputs
+              } else {
+                dateRangeContainer.style.display = 'none'; // Hide the date inputs
+              }
+            });
+            const toggleButton = document.getElementById('station-toggle-btn');
+            const stationDropdown = document.getElementById('station');
+
+            // Toggle dropdown visibility when the button is clicked
+            toggleButton.addEventListener('click', () => {
+              if (stationDropdown.style.display === "none" || stationDropdown.style.display === "") {
+                stationDropdown.style.display = "block"; // Show dropdown
+              } else {
+                stationDropdown.style.display = "none"; // Hide dropdown
+              }
+            });
+          });
+        </script>
     </div>
   </body>
 </html>

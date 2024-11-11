@@ -914,3 +914,103 @@
     left: 0;
   }
   
+/* Styling for the date toggle button */
+.date-toggle-btn {
+  background-color: #4e148c; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px; /* controls rounded corners */
+  margin-bottom: 10px;
+}
+
+.date-toggle-btn:hover {
+  background-color: #370e62; 
+}
+
+/* Date range container styling (initially hidden) */
+.date-range-container {
+  margin-top: 10px;
+}
+
+/* Basic styling for date input fields */
+.date-input {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.date-drop-down label {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Styling the dropdown to look like the button */
+.dropdown {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  width: 100%; /* Adjust width as needed */
+}
+
+/* Styling for dropdown icon */
+.dropdown::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Ensuring dropdown options align with the rest of the design */
+.dropdown option {
+  color: #333;
+}
+
+.station-toggle-btn {
+  background-color: #4e148c; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px; /* controls rounded corners */
+  margin-bottom: 10px;
+}
+
+.station-toggle-btn:hover {
+  background-color: #370e62; 
+}
+
+.station-filter {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.station-filter-box {
+  margin-bottom: 15px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
