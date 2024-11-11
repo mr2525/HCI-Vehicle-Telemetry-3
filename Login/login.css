@@ -10,13 +10,14 @@
     background-color: #ffffff;
     overflow: hidden;
     width: 1512px;
-    height: 982px;
+    height: 0px;
 }
 
 .login .text-wrapper {
-    position: absolute;
+    position: relative;
     width: 609px;
-    top: 885px;
+    top: 860px;
+    left: -35px;
     font-family: "Arial-Regular", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -29,8 +30,8 @@
 
 .login .background-image {
     position: absolute;
-    width: 1512px;
-    height: 982px;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     object-fit: cover;
@@ -140,29 +141,12 @@
     white-space: nowrap;
 }
 
-.login .overlap-group-2 {
-    position: relative;
-    width: 147px;
-    height: 246px;
-    top: 32px;
-    left: 72px;
-}
-
 .login .unknown-user {
-    position: absolute;
-    width: 147px;
-    height: 223px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-
-.login .person-circle {
-    position: absolute;
-    width: 147px;
-    height: 36px;
-    top: 210px;
-    left: 0;
+    position: relative;
+    width: 300px;
+    height: auto;
+    top: -10px;
+    left: 18px;
 }
 
 .login .top-banner {
@@ -179,8 +163,8 @@
 }
 
 .login .purple {
-    position: aboslute;
-    width: 1440px;
+    position: absolute;
+    width: 1696px;
     height: 130px;
     top: 0;
     left: 170px;
@@ -189,43 +173,11 @@
 
 .login .fedex-logo {
     position: absolute;
-    width: 240px;
+    width: 260px;
     height: 130px;
     top: 0;
     left: 0;
     object-fit: cover;
-}
-
-.login .symbols {
-    position: absolute;
-    width: 178px;
-    height: 69px;
-    top: 30px;
-    left: 1300px;
-}
-
-.login .text-wrapper-5 {
-    position: absolute;
-    top: 0;
-    left: 139px;
-    font-family: "Jua-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 55px;
-    letter-spacing: 0;
-    line-height: normal;
-}
-
-.login .text-wrapper-6 {
-    position: absolute;
-    top: 6px;
-    left: 0;
-    font-family: "Jua-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 48px;
-    letter-spacing: 0;
-    line-height: normal;
 }
 
 .login .image {
