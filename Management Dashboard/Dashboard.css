@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    
   }
 
   .regional-manager .overlap-wholescreen {
@@ -11,17 +12,17 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    position: fixed;
   }
     /*#region top banner*/
 
     /*top bar*/
     .regional-manager .top-banner {
       background-color: #4e148c;
-      position: relative;
+      position: fixed;
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
+      
     }
       
       /*top bar container*/
@@ -101,13 +102,14 @@
     /*#endregion*/
   
   
-    /*sidebar container*/
+    /*#region sidebar container*/
   .regional-manager .overlap {
-    position: relative;
+    background-color: #d9d9d9;
     width: 219px;
     height: 100%;
-    background-color: #d9d9d9;
-    float: left;
+    top: 100px;
+    position: fixed;
+    
   }
     
     /* failed sidebar
@@ -125,22 +127,22 @@
     
     .regional-manager .user-info {
       position: relative;
-      width: 100%;
+      width: 219px;
       height: 100%;
-
+      
     }
 
     .regional-manager .overlap-4 {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: 170px;
 
     }
 
     .regional-manager .user-image {
       position: relative;
-      width: 219px;
-      height: 100%;
+      width: 170px;
+      height: 170px;
       object-fit: cover;
       
     }
@@ -171,7 +173,7 @@
     }
       
     .regional-manager .underline {
-      position: absolute;
+      position: relative;
       width: 100%;
       height: 1px;
       top: 28px;
@@ -194,7 +196,7 @@
     }
     
     /*settings word*/
-    
+    /*
     .regional-manager .settings {
       position: absolute;
       width: 214px;
@@ -224,7 +226,7 @@
     }
     
     /*vehicle temematry button*/
-    
+    /*
     .regional-manager .VT-tab {
       position: absolute;
       width: 214px;
@@ -247,7 +249,7 @@
     }
     
     /*dash button*/
-    
+    /*
     .regional-manager .dashboard-tab {
       position: absolute;
       width: 214px;
@@ -284,8 +286,8 @@
       top: 201px;
       left: 3px;
     }
-
-    
+    */
+  /*#endregion*/
     
   /*screen area with main info*/
   .regional-manager .div {
@@ -293,8 +295,10 @@
     overflow: scroll;
     width: 100%;
     height: 100%;
+    top: 100px;
     left: 219px;
-    position: absolute;
+    position: fixed;
+
   }
 
 
