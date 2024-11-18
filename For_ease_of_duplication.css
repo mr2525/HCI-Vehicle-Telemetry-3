@@ -14,7 +14,7 @@
     height: 100%;
     position: fixed;
   }
-  
+
     /*#region top banner*/
 
     /*top bar*/
@@ -55,6 +55,7 @@
     justify-content: center;
     flex-direction: column;
     overflow: scroll;
+    scrollbar-width: thin;
   }
     
     /*profile*/
