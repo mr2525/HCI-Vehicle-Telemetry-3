@@ -103,7 +103,7 @@
   
   
     /*#region sidebar container*/
-  .regional-manager .overlap {
+  .regional-manager .sidebar {
     background-color: #d9d9d9;
     width: 219px;
     height: 100%;
@@ -112,7 +112,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    overflow: scroll;
+    
   }
     
     
@@ -292,7 +292,7 @@
   /*#endregion*/
     
   /*screen area with main info*/
-  .regional-manager .div {
+  .regional-manager .main_content {
     background-color: #afffff;
     overflow: scroll;
     width: 100%;
