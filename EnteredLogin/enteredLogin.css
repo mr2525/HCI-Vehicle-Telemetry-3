@@ -9,8 +9,8 @@
 .login .overlap-wrapper {
     background-color: #ffffff;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 1512px;
+    height: 0px;
 }
 
 .login .text-wrapper {
