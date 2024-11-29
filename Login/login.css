@@ -10,7 +10,7 @@ body, html {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('Images/FedexVehicle.png');
+    background-image: url('../Images/FedexVehicle.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
