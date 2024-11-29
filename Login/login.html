@@ -1,50 +1,30 @@
 <!DOCTYPE html>
-<html lang = "en">
-  <head>
-    <meta charset="UTF-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FedEx Login</title>
-    <link rel="stylesheet" href="login.css" />
-  </head>
-  <body>
-    <div class="login">
-      <div class="overlap-wrapper">
-        <div class="overlap">
-          <img class="background-image" src="../Images/FedexVehicle.png" />
-          <div class="div">Vehicle Telemetry</div>
-          <div class="div-2">
-            <div class="overlap-group">
-              <div class="username-box"></div>
-              <div class="password-box"></div>
-              <div class="text-wrapper-2">Username</div>
-              <div class="text-wrapper-3">Password</div>
-            </div>
-            <div class="div-wrapper"><div class="text-wrapper-4">Login</div></div>
-            <div class="user-photo-icon">
-            </div>
-                <img class="unknown-user" src="../Images/UserProfile.png" />
-              </div>
-            </div>
-          </div>
-          <div class="top-banner">
-            <div class="overlap-2">
-              <div class="purple"></div>
-              <img class="fedex-logo" src="../Images/FedEx-Logo-Square.png" />
-              </div>
-            </div>
-          <div class="text-wrapper">One Vision | One Team</div>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="background"></div>
+    <header class="header">
+        <div class="header-container">
+        <img src="Images/FedEx-Logo-Square.png" alt="FedEx" class="logo">
         </div>
-      </div>
-    </div>
-  </body>
-
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-  </style>
-</html>
-
+    </header>
+    <main class="content">
+        <h1 class="title">Vehicle Telemetry</h1>
+        <div class="icon">
+            <img src="Images/UserProfile.png" alt="FedEx User Login">
+        </div>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <a href="Management Dashboard/Dashboard.html">
+              <button type="submit">Login</button>
+            </a>
+        </form>
+    </main>
+    <h3 class="motto">One Vision | One Team</h3>
+</body>
