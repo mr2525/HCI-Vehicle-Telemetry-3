@@ -246,4 +246,23 @@ body {
     position: fixed;
 
   }
+  .regional-manager .main_content .table-container {
+    position: relative;
+    background-color: #D9D9D9;
+    width: 80%;
+    border-collapse: collapse;
+    padding: 20px;
+    border: 2px solid #000000;
+  }
+  .table-container .table-title{
+    font-size: 40px;
+    font-family: "Arial-Regular", Helvetica;
+  }
+  .table-container th, .table-container td {
+    border: 1px solid #000000;
+  }
+  .table-container thead{
+    /*border: 1px solid #000000;*/
+    background-color: #a7a7a7;
+  }
 
