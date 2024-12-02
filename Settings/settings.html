@@ -1,116 +1,94 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="settings.css" />
-  </head>
-  <body>
-    <div class="regional-manager">
-      <div class="div">
-        <div class="top-banner">
-          <div class="overlap-group">
-            <div class="purple"></div>
-            <img class="fedex-logo" src="img/fedex-logo.png" />
-            <div class="symbols">
-              <div class="text-wrapper">X</div>
-              <div class="text-wrapper-2">-</div>
-              <img class="image" src="img/image-9.png" />
-            </div>
-          </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedEx Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+   <header class="header">
+        <div class="header-container">
+            <img src="../Images/FedEx-Logo-Square.png" alt="FedEx" class="logo">
         </div>
-        <div class="overlap">
-          <div class="sidebar"></div>
-          <a href="../Settings/settings.html">
-            <div class="settings">
-              <div class="div-wrapper">
-                <div class="text-wrapper-3">Settings</div>
-              </div>
+   </header>
+   <nav class="sidebar">
+        <div class="user-info">
+            <div class="user1half-container">
+                <img src="../Images/Fillis.png" alt="FedEx Regional Manager" class="user-profile">
+                <div class="user-name">Hello, Fillis!</div>
             </div>
-          </a>
-          
-          <a href="../Vehicle Telemetry/vtCard.html">
-            <div class="VT-tab">
-              <div class="overlap-2">
-                <div class="text-wrapper-4">Vehicle Telemetry</div>
-              </div>
+            <div class="user2half-container">
+                <div class="user-position">Regional Manager</div>
             </div>
-          </a>
-          
-          <a href="../Management Dashboard/Dashboard.html"> 
-            <div class="dashboard-tab"> 
-              <div class="div-wrapper">
-                <div class="text-wrapper-5">Dashboard</div>
-              </div>
-            </div>
-          </a>
-          
-          <div class="overlap-wrapper">
-            <div class="overlap-3">
-              <img class="underline" src="img/underline.svg" />
-              <div class="text-wrapper-6">Regional Manager</div>
-            </div>
-          </div>
-          <div class="user-info">
-            <div class="overlap-4">
-              <div class="text-wrapper-7">Hello, Fillis!</div>
-              <img class="user-image" src="img/image.png" />
-            </div>
-          </div>
         </div>
-        <div class="scroll-bar"><img class="rectangle" src="img/rectangle-1.svg" /></div>
-        <div class="overlap-5">
-          <div class="settings-banner">
-            <div class="text-wrapper-8">Settings</div>
-            <div class="overlap-6">
-              <div class="overlap-7">
-                <img class="line" src="img/line-1.svg" />
-                <div class="personal-info-button">
-                  <div class="text-wrapper-9">Personal Info</div>
-                  <div class="rectangle-2"></div>
+        <div class="divider"></div>
+        <div class="tab-container">
+            <ul class="nav-links">
+                <li><a href="../Management Dashboard/Dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="../Vehicle Telemetry/vtCard.html" class="nav-link">Vehicle Telemetry</a></li>
+                <li><a href="../Settings/settings.html" class="nav-link active">Settings</a></li>
+            </ul>
+        </div>
+   </nav>
+   <main class="main-container">
+        <div class="content">
+            <section class="top-section">
+                <div class="title">Settings</div>
+                <div class="half2-container">
+                    <ul class="nav-links2">
+                        <li><a href="../Settings/loginSecurity.html" class="nav-link2 active">Personal Info</a></li>
+                        <li><a href="../Settings/settings.html" class="nav-link2">Login & Security</a></li>
+                    </ul>
+                    <div class="divider2"></div>
+                    <button class="edit-btn">
+                        Edit
+                        <img src="../Images/ep--edit.png" alt="Edit Button" class="edit-icon">
+                    </button>
                 </div>
-              </div>
-              <div class="login-security">Login &amp; Security</div>
-            </div>
-          </div>
-          <div class="profile-picture-edit">
-            <div class="overlap-8">
-              <div class="setting-user-profile"></div>
-              <img class="ellipse" src="img/ellipse-2.svg" />
-              <img class="tabler-photo" src="img/tabler-photo.svg" />
-            </div>
-          </div>
-          <button class="edit-button">
-            <div class="overlap-9">
-              <img class="ep-edit" src="img/ep-edit.svg" />
-              <div class="text-wrapper-10">Edit</div>
-            </div>
-          </button>
+            </section>
+            <section class="bottom-section">
+                <div class="user-profile-container">
+                    <div class="user-image">
+                        <img src="../Images/Fillis.png" alt="Fillis" class="profile-picture">
+                        <button class="edit-image">
+                            <img src="../Images/gravity-ui--picture.png" alt="Edit Image" class="edit-photo">
+                        </button>    
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="name-section">
+                        Name
+                        <div class="name-description">Fillis Edwards</div>
+                        <div class="section-divider1"></div>
+                    </div>
+                    <div class="employeeID-section">
+                        Employee ID
+                        <div class="employeeID-description">#5651 - 451358</div>
+                        <div class="section-divider2"></div>
+                    </div>
+                    <div class="position-section">
+                        Position
+                        <div class="position-description">Regional Manager</div>
+                        <div class="section-divider3"></div>
+                    </div>
+                    <div class="region-section">
+                        Region
+                        <div class="region-description">Eastern</div>
+                        <div class="section-divider4"></div>
+                    </div>
+                    <div class="phone-section">
+                        Phone Number
+                        <div class="phone-description">(111) - 111 - 1111</div>
+                        <div class="section-divider5"></div>
+                    </div>
+                    <div class="email-section">
+                        Email
+                        <div class="email-description">fillis@fedex.com</div>
+                        <div class="section-divider6"></div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="name">
-          <div class="name-2">
-            <div class="text-wrapper-11">Name</div>
-            <div class="text-wrapper-12">Fillis Edwards</div>
-          </div>
-          <img class="img" src="img/line-2.svg" />
-        </div>
-        <div class="position">
-          <div class="text-wrapper-13">Position</div>
-          <img class="img" src="img/image.svg" />
-          <div class="text-wrapper-14">Regional Manager</div>
-        </div>
-        <div class="phone-number">
-          <div class="text-wrapper-15">Phone Number</div>
-          <img class="img" src="img/line-2-3.svg" />
-          <p class="text-wrapper-16">(111) - 111 - 1111</p>
-        </div>
-        <div class="email">
-          <div class="text-wrapper-15">Email</div>
-          <img class="img" src="img/line-2-2.svg" />
-          <div class="text-wrapper-16">fillis@fedex.com</div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
-
+   </main>
+</body>
