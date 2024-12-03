@@ -1,249 +1,161 @@
-body {
-  padding:0;
-  margin:0; 
-  }
-.regional-manager {
-    background-color: #4e148c;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/*banner*/
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #4e148c;
+}
 
-  .regional-manager .overlap-wholescreen {
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-  }
+.header-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-    /*#region top banner*/
+.logo {
+  position: absolute;
+  width: 240px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+/*sidebar*/
+.sidebar {
+  width: 219px;
+  height: 100%;
+  top: 100px;
+  left: 0;
+  background-color: #d9d9d9;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
 
-    /*top bar*/
-    .regional-manager .top-banner {
-      background-color: #4e148c;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      
-    }
-    
-    /*top bar container*/
-    .regional-manager .overlap-group {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    }
-    
-    /*fedex pic*/
-    .regional-manager .fedex-logo {
-    position: relative;
-    width: 240px;
-    height: 100px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    }
-    /*#endregion*/
-  
-/*sidebar container*/
-  .regional-manager .sidebar {
-    background-color: #d9d9d9;
-    width: 219px;
-    height: 100%;
-    top: 100px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: scroll;
-    scrollbar-width: thin;
-  }
-    
-    /*profile*/
-    /*#region profile + name*/
-    .regional-manager .user-info {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-    
-    }
+.user-info {
+  position: absolute;
+  width: 219px;
+  height: 100%;
+  text-align: center;
+}
 
-    .regional-manager .overlap-4 {
-      position: absolute;
-      width: 100%;
-      height: 130px;
-      top: 10px;
-      
-    }
+.user1half-container {
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  top: 10px;
+}
 
-    .regional-manager .user-image {
-      position: relative;
-      width: 170px;
-      height: 130px;
-      object-fit: cover;
-      
-    }
+.user-profile {
+  position: relative;
+  width: 170px;
+  height: 130px;
+  object-fit: cover;
+}
 
-    /*hello*/
-    
-    .regional-manager .text-wrapper-7 {
-      position: relative;
-      width: 100%;
-      top: 0;
-      left: 0;
-      font-family: "Arial-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 24px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      
-    }
-    /*#endregion*/
+.user-name {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Arial-Regular", Helvetica;
+  font-weight: 400;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
 
-    /*position*/
-    /*#region*/
-    .regional-manager .overlap-wrapper {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 170px;
-    }
+.user2half-container {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 170px;
+}
 
-    .regional-manager .overlap-3 {
-      position: relative;
-      width: 219px;
-      height: 100%;
-      
-    }
-      
-    .regional-manager .text-wrapper-6 {
-      position: relative;
-      width: 100%;
-      top: 0;
-      left: 0;
-      font-family: "Arial-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 22px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      text-decoration: underline;
-    }
-    
-    /*#endregion*/
-    
-    /*dash button*/
-    /*#region*/
-    .regional-manager .dashboard-tab {
-      position: absolute;
-      width: 100%;
-      height: 48px;
-      top: 220px;
-      left: 10px;
-  
-    }
-    
-    .regional-manager .div-wrapper {
-      position: relative;
-      width: 212px;
-      height: 48px;
-      background-color: #4e148c;
-    }
-    
-    .regional-manager .text-wrapper-5 {
-      position: relative;
-      width: 100%;
-      top: 12px;
-      left: 8px;
-      font-family: "Arial-Regular", Helvetica;
-      font-weight: 400;
-      color: #ffffff;
-      font-size: 20px;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    /*#endregion*/
+.user-position {
+  position: relative;
+  width: 100%;
+  top: 7px;
+  left: 0;
+  font-family: "Arial-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
 
-    /*settings word*/
-    /*#region*/
-    .regional-manager .settings {
-      position: absolute;
-      width: 100%;
-      height: 48px;
-      top: 270px;
-      left: 10px;
-    }  
-    
-    .regional-manager .div-wrapper-2 {
-      position: relative;
-      width: 212px;
-      height: 48px;
-      background-color: #ffffff;
-    }
-    
-    .regional-manager .text-wrapper-3 {
-      position: absolute;
-      width: 94px;
-      top: 11px;
-      left: 8px;
-      font-family: "Arial-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 20px;
-      letter-spacing: 0;
-      line-height: normal;
-    }
-    /*#endregion*/
+.divider {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 210px;
+  background-color: black;
+}
 
-    /*vehicle temematry button*/
-    /*#region*/
-    .regional-manager .VT-tab {
-      position: absolute;
-      width: 100%;
-      height: 48px;
-      top: 321px;
-      left: 10px;
-    }
+.tab-container {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  top: 240px;
+  left: 0;
+}
 
-    .regional-manager .overlap-2 {
-      position: relative;
-      width: 212px;
-      height: 48px;
-      background-color: #ffffff;
-      
-    }  
-    
-    .regional-manager .text-wrapper-4 {
-      position: absolute;
-      width: 160px;
-      top: 12px;
-      left: 8px;
-      font-family: "Arial-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 20px;
-      letter-spacing: 0;
-      line-height: normal;
-    }
-    
-  /*#endregion*/
-    
-  /*screen area with main info*/
-  .regional-manager .main_content {
-    background-color: #afffff;
-    overflow: scroll;
-    width: 100%;
-    height: 100%;
-    top: 100px;
-    left: 219px;
-    position: fixed;
+.nav-links {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+}
 
-  }
+.nav-link {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Arial-Regular", Helvetica;
+  background-color: white;
+  margin-bottom: 5px;
+}
 
+.nav-link:hover, .nav-link.active {
+  background-color: #4e148c;
+  color: white;
+}
+
+/*content screen*/
+.main-container {
+  position: absolute;
+  width: calc(100% - 219px);
+  height: calc(100vh - 100px);
+  top: 100px;
+  left: 219px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*main content*/
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 30px;
+  left: 30px;
+  right: -30px;
+}
