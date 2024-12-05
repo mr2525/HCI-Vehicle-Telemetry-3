@@ -1,7 +1,7 @@
 body {
   padding:0;
-  margin:0; 
-  }
+  margin:0;
+}
 .regional-manager {
     background-color: #4e148c;
     display: flex;
@@ -177,7 +177,7 @@ body {
       position: absolute;
       width: 100%;
       height: 48px;
-      top: 270px;
+      top: 321px;
       left: 10px;
     }  
     
@@ -208,7 +208,7 @@ body {
       position: absolute;
       width: 100%;
       height: 48px;
-      top: 321px;
+      top: 270px;
       left: 10px;
     }
 
