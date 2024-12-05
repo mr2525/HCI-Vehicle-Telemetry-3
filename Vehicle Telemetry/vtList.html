@@ -58,10 +58,10 @@
               <div class="magnifying-glass-icon">🔍</div>
             </div>
             <div class="filter-buttons">
-              <button class="filter-button">
+              <button class="filter-button" onclick="openFilterPopup()">
                 Station <span class="expand-arrow">▼</span>
               </button>
-              <button class="filter-button">
+              <button class="filter-button" onclick="openDateFilterPopup()">
                 Date <span class="expand-arrow">▼</span>
               </button>
             </div>
@@ -94,10 +94,7 @@
           <!-- Filter Buttons -->
           <div class="filter-container">
             <div class="active-filters">
-              <button class="filter-tag">Eastern <span class="close-filter">✖</span></button>
-              <button class="filter-tag">Founders <span class="close-filter">✖</span></button>
-              <button class="filter-tag">Massachusetts <span class="close-filter">✖</span></button>
-              <button class="filter-tag">OWDA <span class="close-filter">✖</span></button>
+              
             </div>
           </div>
           <!-- Maintence List View -->
@@ -150,7 +147,65 @@
                 <span class="card-item">Notes: Vehicle operational.</span>
               </div>
             </div>
-          </div> <!-- maintence end -->                  
+          </div> <!-- maintence end -->  
+
+          <!-- Station filter pop-up -->
+          <div class="filter-popup" id="filterPopup">
+            <div class="popup-header">
+              <span class="popup-title">Station Filter</span>
+              <button class="close-popup" onclick="closeFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="region">Region:</label>
+              <select id="region">
+                <option value="Eastern">Eastern</option>
+                <option value="Western">Western</option>
+                <!-- Add more regions as needed -->
+              </select>
+              <label for="district">District:</label>
+              <select id="district">
+                <option value="Founders">Founders</option>
+                <option value="Pioneers">Pioneers</option>
+                <!-- Add more districts as needed -->
+              </select>
+              <label for="state">State:</label>
+              <select id="state">
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="California">California</option>
+                <!-- Add more states as needed -->
+              </select>
+              <label for="station">Station:</label>
+              <select id="station">
+                <option value="OWDA">OWDA</option>
+                <option value="CEFA">CEFA</option>
+                <option value="BOSA">BOSA</option>
+              </select>
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyFilters()">Apply</button>
+              <button onclick="closeFilterPopup()">Cancel</button>
+            </div>
+          </div> <!-- end filter pop-up -->
+
+          <!-- Date Filter Popup -->
+          <div id="dateFilterPopup" class="filter-popup hidden">
+            <div class="popup-header">
+              <span class="popup-title">Date Filter</span>
+              <button class="close-popup" onclick="closeDateFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="startDate">Start Date:</label>
+              <input type="date" id="startDate" />
+              <label for="endDate">End Date:</label>
+              <input type="date" id="endDate" />
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyDateFilters()">Apply</button>
+              <button onclick="closeDateFilterPopup()">Cancel</button>
+            </div>
+          </div>
+
+          <script src="stationFilter.js"></script>             
         </div>
       </div>
     </div>
