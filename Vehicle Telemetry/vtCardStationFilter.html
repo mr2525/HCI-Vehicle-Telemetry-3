@@ -62,7 +62,7 @@
                 Station <span class="expand-arrow">▼</span>
               </button>
               <button class="filter-button">
-                Date <span class="expand-arrow">▼</span>
+                Date <span class="expand-arrow" onclick="openDateFilterPopup()">▼</span>
               </button>
             </div>
             <div class="view-buttons">
@@ -181,7 +181,7 @@
           </div>
           <!-- <div class="gray-overlay" id="grayOverlay"></div> -->
           
-          <!-- filter pop-up -->
+          <!-- Station filter pop-up -->
           <div class="filter-popup" id="filterPopup">
             <div class="popup-header">
               <span class="popup-title">Station Filter</span>
@@ -217,7 +217,26 @@
               <button onclick="applyFilters()">Apply</button>
               <button onclick="closeFilterPopup()">Cancel</button>
             </div>
-          </div> <!-- end filter pop-up -->   
+          </div> <!-- end filter pop-up -->
+
+          <!-- Date Filter Popup -->
+          <div id="dateFilterPopup" class="filter-popup hidden">
+            <div class="popup-header">
+              <span class="popup-title">Date Filter</span>
+              <button class="close-popup" onclick="closeDateFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="startDate">Start Date:</label>
+              <input type="date" id="startDate" />
+              <label for="endDate">End Date:</label>
+              <input type="date" id="endDate" />
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyDateFilters()">Apply</button>
+              <button onclick="closeDateFilterPopup()">Cancel</button>
+            </div>
+          </div>
+          
           <script src="stationFilter.js"></script>       
         </div>
       </div>
