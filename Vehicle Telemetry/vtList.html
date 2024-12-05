@@ -2,184 +2,155 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
+    <title>Fedex Vehicle Telemetry</title>
     <link rel="stylesheet" href="vtList.css" />
   </head>
   <body>
     <div class="regional-manager">
-      <div class="div">
+      <div class="overlap-wholescreen">
         <div class="top-banner">
           <div class="overlap-group">
-            <div class="purple"></div>
-            <img class="fedex-logo" src="img/fedex-logo.png" />
-            <div class="symbols">
-              <div class="text-wrapper">X</div>
-              <div class="text-wrapper-2">-</div>
-              <img class="image" src="img/image-9.png" />
-            </div>
+            <img class="fedex-logo" src="../Images/FedEx-Logo-Square.png" />
           </div>
         </div>
-        <div class="overlap">
-          <div class="sidebar"></div>
-          <a href="../Settings/settings.html">
-            <div class="settings">
-              <div class="div-wrapper">
-                <div class="text-wrapper-3">Settings</div>
-              </div>
-            </div>
-          </a>
-          
-          <a href="vtCard.html">
-            <div class="VT-tab">
-              <div class="overlap-2">
-                <div class="text-wrapper-4">Vehicle Telemetry</div>
-              </div>
-            </div>
-          </a>
-          
-          <a href="../Management Dashboard/Dashboard.html"> 
-            <div class="dashboard-tab"> 
-              <div class="div-wrapper">
-                <div class="text-wrapper-5">Dashboard</div>
-              </div>
-            </div>
-          </a>
-          
-          <div class="overlap-wrapper">
-            <div class="overlap-3">
-              <img class="underline" src="img/underline.svg" />
-              <div class="text-wrapper-6">Regional Manager</div>
-            </div>
-          </div>
+        <div class="sidebar">
           <div class="user-info">
             <div class="overlap-4">
+              <img class="user-image" src="../Images/Fillis.png" />
               <div class="text-wrapper-7">Hello, Fillis!</div>
-              <img class="user-image" src="img/user-image.png" />
             </div>
           </div>
+          <div class="overlap-wrapper">
+            <div class="overlap-3">
+            <div class="text-wrapper-6">Regional Manager</div>
+            </div>
+          </div>
+          <a href="../Management Dashboard/Dashboard.html"> 
+                <div class="dashboard-tab"> 
+                <div class="div-wrapper">
+                    <div class="text-wrapper-5">Dashboard</div>
+                </div>
+                </div>
+          </a>
+          <a href="../Settings/settings.html">
+                <div class="settings">
+                <div class="div-wrapper-2">
+                    <div class="text-wrapper-3">Settings</div>
+                </div>
+                </div>
+          </a>  
+          <a href="../Vehicle Telemetry/vtCard.html">
+                <div class="VT-tab">
+                <div class="overlap-2">
+                    <div class="text-wrapper-4">Vehicle Telemetry</div>
+                </div>
+                </div>
+          </a>
         </div>
-        <div class="scroll-bar"><img class="rectangle" src="img/rectangle-1.svg" /></div>
-        <div class="overlap-5">
-          <div class="search-bar">
-            <div class="overlap-6">
-              <img class="img" src="img/search-bar.svg" />
-              <img class="magnifying-glass" src="img/magnifying-glass.png" />
-              <p class="p">Search by Vehicle ID #</p>
+        <div class="main_content">
+          <div class="top-bar">
+            <div class="overlap-magnifying-glass">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search by Vehicle ID #"
+              />
+              <div class="magnifying-glass-icon">🔍</div>
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-button">
+                Station <span class="expand-arrow">▼</span>
+              </button>
+              <button class="filter-button">
+                Date <span class="expand-arrow">▼</span>
+              </button>
+            </div>
+            <div class="view-buttons">
+              <button class="square-button grid-view">
+                <!-- Button with 9 small squares -->
+                <div class="icon-grid">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              </button>
+              <button class="square-button list-view">
+                <!-- Button with 3 horizontal rectangles -->
+                <div class="icon-list">
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                </div>
+              </button>
+            </div>
+          </div> <!--top-bar-->
+          <!-- Filter Buttons -->
+          <div class="filter-container">
+            <div class="active-filters">
+              <button class="filter-tag">Eastern <span class="close-filter">✖</span></button>
+              <button class="filter-tag">Founders <span class="close-filter">✖</span></button>
+              <button class="filter-tag">Massachusetts <span class="close-filter">✖</span></button>
+              <button class="filter-tag">OWDA <span class="close-filter">✖</span></button>
             </div>
           </div>
-          <div class="station-filter">
-            <div class="overlap-7">
-              <div class="station-filter-box"></div>
-              <img class="vector" src="img/vector-3.svg" />
-              <div class="text-wrapper-8">Eastern</div>
+          <!-- Maintence List View -->
+          <div class="maintenance-container">
+            <!-- Urgent Maintenance -->
+            <div class="maintenance-bar urgent-maintenance">
+              <h2>Urgent Maintenance</h2>
             </div>
-          </div>
-          <div class="overlap-group-wrapper">
-            <div class="overlap-7">
-              <div class="station-filter-box"></div>
-              <img class="vector" src="img/vector-2.svg" />
-              <div class="text-wrapper-8">Founders</div>
-            </div>
-          </div>
-        </div>
-        <div class="filter-options">
-          <div class="filter-options-2">
-            <div class="date-drop-down">
-              <div class="overlap-group-2">
-                <img class="drop-down-icon" src="img/drop-down-icon.svg" />
-                <div class="text-wrapper-9">Date</div>
+            <div class="maintenance-cards">
+              <div class="maintenance-card">
+                <span class="card-item">#10156 - 2024 Nissan Rouge</span>
+                <span class="card-item">Location: Eastern</span>
+                <span class="card-item">Issue: Engine overheating</span>
+                <span class="card-item">Date Reported: 12/03/2024</span>
+                <span class="card-item">Notes: Immediate action required.</span>
+              </div>
+              <div class="maintenance-card">
+                <span class="card-item">#90456 - 2024 Nissan Rouge</span>
+                <span class="card-item">Location: Founders</span>
+                <span class="card-item">Issue: Brake failure</span>
+                <span class="card-item">Date Reported: 12/02/2024</span>
+                <span class="card-item">Notes: Critical issue.</span>
               </div>
             </div>
-            <div class="station-drop-down">
-              <div class="overlap-8">
-                <img class="drop-down-icon" src="img/drop-down-icon-2.svg" />
-                <div class="text-wrapper-9">Station</div>
+          
+            <!-- Upcoming Maintenance -->
+            <div class="maintenance-bar upcoming-maintenance">
+              <h2>Upcoming Maintenance</h2>
+            </div>
+            <div class="maintenance-cards">
+              <div class="maintenance-card">
+                <span class="card-item">#90499 - 2024 Nissan Rouge</span>
+                <span class="card-item">Location: Massachusetts</span>
+                <span class="card-item">Issue: Routine tire check</span>
+                <span class="card-item">Date Reported: 11/30/2024</span>
+                <span class="card-item">Notes: Scheduled next week.</span>
               </div>
             </div>
-            <img class="vector-2" src="img/vector.svg" />
-          </div>
-        </div>
-        <div class="toggle-view">
-          <img class="switches-to-box" src="img/switches-to-box.png" />
-          <div class="switches-to-list">
-            <div class="list">
-              <img class="top-line" src="img/top-line.svg" />
-              <div class="ellipse"></div>
+          
+            <!-- No Maintenance -->
+            <div class="maintenance-bar no-maintenance">
+              <h2>No Maintenance</h2>
             </div>
-            <div class="list-2">
-              <img class="top-line" src="img/image.svg" />
-              <div class="ellipse"></div>
+            <div class="maintenance-cards">
+              <div class="maintenance-card">
+                <span class="card-item">#17632 - 2024 Nissan Rouge</span>
+                <span class="card-item">Location: OWDA</span>
+                <span class="card-item">Issue: None</span>
+                <span class="card-item">Date Reported: N/A</span>
+                <span class="card-item">Notes: Vehicle operational.</span>
+              </div>
             </div>
-            <div class="list-3">
-              <img class="top-line" src="img/top-line-2.svg" />
-              <div class="ellipse"></div>
-            </div>
-          </div>
-        </div>
-        <div class="urgent">
-          <div class="overlap-9"><div class="text-wrapper-10">Urgent Maintenance</div></div>
-        </div>
-        <div class="vehicle">
-          <div class="overlap-10">
-            <div class="element-nissan">#10156<br />2024 Nissan Rouge</div>
-            <div class="text-wrapper-11">Location:</div>
-            <div class="text-wrapper-12">Issue:</div>
-            <div class="text-wrapper-13">Date Reported:</div>
-            <div class="text-wrapper-14">Notes</div>
-          </div>
-        </div>
-        <div class="vehicle-2">
-          <div class="overlap-10">
-            <div class="element-nissan">#90456<br />2024 Nissan Rouge</div>
-            <div class="text-wrapper-11">Location:</div>
-            <div class="text-wrapper-12">Issue:</div>
-            <div class="text-wrapper-13">Date Reported:</div>
-            <div class="text-wrapper-14">Notes</div>
-          </div>
-        </div>
-        <div class="vehicle-3">
-          <div class="overlap-10">
-            <div class="element-nissan-2">#21342<br />2024 Nissan Rouge</div>
-            <div class="text-wrapper-11">Location:</div>
-            <div class="text-wrapper-12">Issue:</div>
-            <div class="text-wrapper-13">Date Reported:</div>
-            <div class="text-wrapper-14">Notes</div>
-          </div>
-        </div>
-        <div class="vehicle-4">
-          <div class="overlap-11">
-            <div class="element-nissan-3">#90499<br />2024 Nissan Rouge</div>
-            <div class="text-wrapper-11">Location:</div>
-            <div class="text-wrapper-12">Issue:</div>
-            <div class="text-wrapper-13">Date Reported:</div>
-            <div class="text-wrapper-14">Notes</div>
-          </div>
-        </div>
-        <div class="vehicle-5">
-          <div class="overlap-11">
-            <div class="element-nissan-4">#17632<br />2024 Nissan Rouge</div>
-            <div class="text-wrapper-11">Location:</div>
-            <div class="text-wrapper-12">Issue:</div>
-            <div class="text-wrapper-13">Date Reported:</div>
-            <div class="text-wrapper-14">Notes</div>
-          </div>
-        </div>
-        <div class="upcoming-maintence">
-          <div class="overlap-12"><div class="text-wrapper-15">Upcoming Maintenance</div></div>
-        </div>
-        <div class="station-filter-2">
-          <div class="overlap-13">
-            <div class="station-filter-box-2"></div>
-            <img class="vector-3" src="img/vector-5.svg" />
-            <div class="text-wrapper-16">Massachusetts</div>
-          </div>
-        </div>
-        <div class="station-filter-3">
-          <div class="overlap-7">
-            <div class="station-filter-box"></div>
-            <img class="vector" src="img/vector-4.svg" />
-            <div class="text-wrapper-8">OWDA</div>
-          </div>
+          </div> <!-- maintence end -->                  
         </div>
       </div>
     </div>
