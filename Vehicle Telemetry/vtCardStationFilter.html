@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fedex Vehicle Telemetry</title>
+    <link rel="stylesheet" href="vtCardStationFilter.css" />
+  </head>
+  <body>
+    <div class="regional-manager">
+      <div class="overlap-wholescreen">
+        <div class="top-banner">
+          <div class="overlap-group">
+            <img class="fedex-logo" src="../Images/FedEx-Logo-Square.png" />
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="user-info">
+            <div class="overlap-4">
+              <img class="user-image" src="../Images/Fillis.png" />
+              <div class="text-wrapper-7">Hello, Fillis!</div>
+            </div>
+          </div>
+          <div class="overlap-wrapper">
+            <div class="overlap-3">
+            <div class="text-wrapper-6">Regional Manager</div>
+            </div>
+          </div>
+          <a href="../Management Dashboard/Dashboard.html"> 
+                <div class="dashboard-tab"> 
+                <div class="div-wrapper">
+                    <div class="text-wrapper-5">Dashboard</div>
+                </div>
+                </div>
+          </a>
+          <a href="../Settings/settings.html">
+                <div class="settings">
+                <div class="div-wrapper-2">
+                    <div class="text-wrapper-3">Settings</div>
+                </div>
+                </div>
+          </a>  
+          <a href="../Vehicle Telemetry/vtCard.html">
+                <div class="VT-tab">
+                <div class="overlap-2">
+                    <div class="text-wrapper-4">Vehicle Telemetry</div>
+                </div>
+                </div>
+          </a>
+        </div>
+        <div class="main_content">
+          <div class="top-bar">
+            <div class="overlap-magnifying-glass">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search by Vehicle ID #"
+              />
+              <div class="magnifying-glass-icon">🔍</div>
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-button" onclick="openFilterPopup()">
+                Station <span class="expand-arrow">▼</span>
+              </button>
+              <button class="filter-button">
+                Date <span class="expand-arrow">▼</span>
+              </button>
+            </div>
+            <div class="view-buttons">
+              <button class="square-button grid-view">
+                <!-- Button with 9 small squares -->
+                <div class="icon-grid">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              </button>
+              <button class="square-button list-view">
+                <!-- Button with 3 horizontal rectangles -->
+                <div class="icon-list">
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                </div>
+              </button>
+            </div>
+          </div> <!--top-bar-->
+          <!-- Filter Buttons -->
+          <div class="filter-container">
+            <div class="active-filters" id="active-filters">
+            
+            </div>
+          </div>
+
+          <!-- Vehicle Cards -->
+          <div class="vehicle-grid">
+            <div class="vehicle-card warning">
+              <div class="icon warning-icon">🚨</div>
+              <div class="vehicle-id">#10156</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card warning">
+              <div class="icon warning-icon">🚨</div>
+              <div class="vehicle-id">#90456</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card warning">
+              <div class="icon warning-icon">🚨</div>
+              <div class="vehicle-id">#21342</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+
+            <div class="vehicle-card caution">
+              <div class="icon caution-icon">⚠️</div>
+              <div class="vehicle-id">#90499</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card caution">
+              <div class="icon caution-icon">⚠️</div>
+              <div class="vehicle-id">#17632</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card caution">
+              <div class="icon caution-icon">⚠️</div>
+              <div class="vehicle-id">#45094</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card caution">
+              <div class="icon caution-icon">⚠️</div>
+              <div class="vehicle-id">#49013</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card caution">
+              <div class="icon caution-icon">⚠️</div>
+              <div class="vehicle-id">#12098</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+
+            <div class="vehicle-card normal">
+              <div class="icon normal-icon">✅</div>
+              <div class="vehicle-id">#15236</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card normal">
+              <div class="icon normal-icon">✅</div>
+              <div class="vehicle-id">#90401</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card normal">
+              <div class="icon normal-icon">✅</div>
+              <div class="vehicle-id">#20035</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card normal">
+              <div class="icon normal-icon">✅</div>
+              <div class="vehicle-id">#13986</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card normal">
+              <div class="icon normal-icon">✅</div>
+              <div class="vehicle-id">#90431</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card normal">
+              <div class="icon normal-icon">✅</div>
+              <div class="vehicle-id">#47810</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <div class="vehicle-card normal">
+              <div class="icon normal-icon">✅</div>
+              <div class="vehicle-id">#27854</div>
+              <div class="vehicle-model">2024 Nissan Rouge</div>
+            </div>
+            <!-- Add more vehicle-card divs as needed -->
+          </div>
+          <!-- <div class="gray-overlay" id="grayOverlay"></div> -->
+          
+          <!-- filter pop-up -->
+          <div class="filter-popup" id="filterPopup">
+            <div class="popup-header">
+              <span class="popup-title">Station Filter</span>
+              <button class="close-popup" onclick="closeFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="region">Region:</label>
+              <select id="region">
+                <option value="Eastern">Eastern</option>
+                <option value="Western">Western</option>
+                <!-- Add more regions as needed -->
+              </select>
+              <label for="district">District:</label>
+              <select id="district">
+                <option value="Founders">Founders</option>
+                <option value="Pioneers">Pioneers</option>
+                <!-- Add more districts as needed -->
+              </select>
+              <label for="state">State:</label>
+              <select id="state">
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="California">California</option>
+                <!-- Add more states as needed -->
+              </select>
+              <label for="station">Station:</label>
+              <select id="station">
+                <option value="OWDA">OWDA</option>
+                <option value="CEFA">CEFA</option>
+                <option value="BOSA">BOSA</option>
+              </select>
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyFilters()">Apply</button>
+              <button onclick="closeFilterPopup()">Cancel</button>
+            </div>
+          </div> <!-- end filter pop-up -->   
+          <script src="stationFilter.js"></script>       
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
