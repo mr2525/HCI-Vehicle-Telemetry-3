@@ -2,110 +2,200 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fedex Vehicle Telemetry</title>
     <link rel="stylesheet" href="vehicleUseHist.css" />
   </head>
   <body>
-    <div class="regional-manager">
-      <div class="overlap-wholescreen">
-        <div class="top-banner">
-          <div class="overlap-group">
-            <img class="fedex-logo" src="../Images/FedEx-Logo-Square.png" />
-          </div>
-        </div>
-        <div class="sidebar">
-          <div class="user-info">
-            <div class="overlap-4">
-              <img class="user-image" src="../Images/Fillis.png" />
-              <div class="text-wrapper-7">Hello, Fillis!</div>
-            </div>
-          </div>
-          <div class="overlap-wrapper">
-            <div class="overlap-3">
-              <div class="text-wrapper-6">Regional Manager</div>
-            </div>
-          </div>
-          <a href="../Management Dashboard/Dashboard.html"> 
-            <div class="dashboard-tab"> 
-              <div class="div-wrapper">
-                <div class="text-wrapper-5">Dashboard</div>
-              </div>
-            </div>
-          </a>
-          <a href="../Settings/settings.html">
-            <div class="settings">
-              <div class="div-wrapper-2">
-                <div class="text-wrapper-3">Settings</div>
-              </div>
-            </div>
-          </a>
-          
-          <a href="../Vehicle Telemetry/vtCard.html">
-            <div class="VT-tab">
-              <div class="overlap-2">
-                <div class="text-wrapper-4">Vehicle Telemetry</div>
-              </div>
-            </div>
-          </a>
-          
-        </div>
-        <div class="main_content">
-          <!--
-           Comments and Resources
-           https://www.w3schools.com/html/html_tables.asp
-           https://www.w3schools.com/css/css_table.asp
-           -->
-          <!-- Start of table information-->
-           <!-- make a new div to house all the table info / extra things in
-            reference Nhi's login security -->
-           <table class="table-container">
-            <h1 class="table-title">Vehicle Use History</h1>
-            <!-- table header -->
-             <thead>
-              <tr>
-                <th>Date</th>
-                <th>Vehicle</th>
-                <!-- Station will be Category for Maintence-->
-                <th>Station</th>
-                <th>Notes</th>
-              </tr>
-             </thead>
-             <!-- body of the table-->
-              <tbody>
-                <tr>
-                  <td>2024-10-29</td>
-                  <td>insert ID here</td>
-                  <td>insert station here</td>
-                  <td>any additional notes</td>
-                </tr>
-                <tr>
-                  <td>2024-10-29</td>
-                  <td>insert ID here</td>
-                  <td>insert station here</td>
-                  <td>any additional notes</td>
-                </tr>
-                <tr>
-                  <td>2024-10-29</td>
-                  <td>insert ID here</td>
-                  <td>insert station here</td>
-                  <td>any additional notes</td>
-                </tr>
-                <tr>
-                  <td>2024-10-29</td>
-                  <td>insert ID here</td>
-                  <td>insert station here</td>
-                  <td>any additional notes</td>
-                </tr>
-                <tr>
-                  <td>2024-10-29</td>
-                  <td>insert ID here</td>
-                  <td>insert station here</td>
-                  <td>any additional notes</td>
-                </tr>
-              </tbody>
-           </table>
-        </div>
+    <header class="header">
+      <div class="header-container">
+          <img src="../Images/FedEx-Logo-Square.png" alt="FedEx" class="logo">
       </div>
-    </div>
+ </header>
+ <nav class="sidebar">
+      <div class="user-info">
+          <div class="user1half-container">
+              <img src="../Images/Fillis.png" alt="FedEx Regional Manager" class="user-profile">
+              <div class="user-name">Hello, Fillis!</div>
+          </div>
+          <div class="user2half-container">
+              <div class="user-position">Regional Manager</div>
+          </div>
+      </div>
+      <div class="tab-container">
+          <ul class="nav-links">
+              <li><a href="../Management Dashboard/Dashboard.html" class="nav-link">Dashboard</a></li>
+              <li><a href="../Vehicle Telemetry/vtCard.html" class="nav-link">Vehicle Telemetry</a></li>
+              <li><a href="../Settings/settings.html" class="nav-link active">Settings</a></li>
+          </ul>
+      </div>
+  </nav>
+  <main class="main-container">
+    <!--
+    Comments and Resources
+    https://www.w3schools.com/html/html_tables.asp
+    https://www.w3schools.com/css/css_table.asp
+    -->
+    <!-- Start of table information-->
+    <!-- make a new div to house all the table info / extra things in
+    reference Nhi's login security -->
+    <div class="content">
+      <section class="top_section">
+        <!-- This will be where our tabs are housed, like filters and all
+        table header 
+        filters
+        still need search bar
+        -->
+        <section class="top-bar">
+        <!-- search bar here-->
+        <div class="overlap-magnifying-glass">
+          <input
+          type="text"
+          class="search-input"
+          placeholder="Search by Vehicle ID #"
+          />
+          <div class="magnifying-class-icon">🔍</div>
+        </div>
+        <!-- filter buttons start here--> 
+        <div class="filter-buttons">
+          <button class="filter-button" onclick="openFilterPopup()">
+            Station <span class="expand-arrow">▼</span>
+          </button>
+          <button class="filter-button" onclick="openDateFilterPopup()">
+            Date <span class="expand-arrow">▼</span>
+          </button>          
+        </div>
+        <!-- display active filters buttons here-->
+         <div class="filter-container">
+            <div class="active-filters" id=""active-filters>
+
+            </div>
+         </div>
+      
+        <!-- tabs here likely-->
+        </section>
+
+      </section>
+      <!-- it may end up being helpful for use to make a separate title section but we will see-->
+      <section class="bottom_table_section">
+
+        <!-- this is where our table and such will be-->
+        <!-- table title here and image here -->
+        <div class="table_title_container">
+          <div class="use_image">
+            <img src="../Images/Vehicle Use Icon.png"
+            width="60"
+            height="60"/>
+          </div>
+          <div class="table_title">
+            Vehicle Use History
+          </div>
+        </div>
+        <!-- insert the table info here-->
+        <table class="table-container">
+          <!-- table header -->
+           <thead>
+            <tr>
+              <th>Date</th>
+              <th>Vehicle</th>
+              <th>Station</th>
+              <th>Notes</th>
+            </tr>
+           </thead>
+           <!-- t body info-->
+           <tbody>
+            <tr>
+              <td>2024-10-29</td>
+              <td>insert ID here</td>
+              <td>insert station here</td>
+              <td>any additional notes</td>
+            </tr>
+            <tr>
+              <td>2024-10-29</td>
+              <td>insert ID here</td>
+              <td>insert station here</td>
+              <td>any additional notes</td>
+            </tr>
+            <tr>
+              <td>2024-10-29</td>
+              <td>insert ID here</td>
+              <td>insert station here</td>
+              <td>any additional notes</td>
+            </tr>
+            <tr>
+              <td>2024-10-29</td>
+              <td>insert ID here</td>
+              <td>insert station here</td>
+              <td>any additional notes</td>
+            </tr>
+            <tr>
+              <td>2024-10-29</td>
+              <td>insert ID here</td>
+              <td>insert station here</td>
+              <td>any additional notes</td>
+            </tr>
+           </tbody>
+        </table>
+      </section>
+      <!-- put in the filter pop ups here-->
+      <!-- Station filter pop-up -->
+        <div class="filter-popup" id="filterPopup">
+          <div class="popup-header">
+            <span class="popup-title">Station Filter</span>
+            <button class="close-popup" onclick="closeFilterPopup()">✖</button>
+          </div>
+          <div class="popup-content">
+            <label for="region">Region:</label>
+            <select id="region">
+            <option value="Eastern">Eastern</option>
+            <option value="Western">Western</option>
+            <!-- Add more regions as needed -->
+            </select>
+            <label for="district">District:</label>
+            <select id="district">
+              <option value="Founders">Founders</option>
+              <option value="Pioneers">Pioneers</option>
+              <!-- Add more districts as needed -->
+            </select>
+            <label for="state">State:</label>
+            <select id="state">
+              <option value="Massachusetts">Massachusetts</option>
+              <option value="California">California</option>
+              <!-- Add more states as needed -->
+            </select>
+            <label for="station">Station:</label>
+            <select id="station">
+              <option value="OWDA">OWDA</option>
+              <option value="CEFA">CEFA</option>
+              <option value="BOSA">BOSA</option>
+            </select>
+          </div>
+          <div class="popup-footer">
+            <button onclick="applyFilters()">Apply</button>
+            <button onclick="closeFilterPopup()">Cancel</button>
+          </div>
+          </div> <!-- end filter pop-up -->
+
+          <!-- add in our date filter pop up-->
+          <div id="dateFilterPopup" class="filter-popup hidden">
+            <div class="popup-header">
+              <span class="popup-title">Date Filter</span>
+              <button class="close-popup" onclick="closeDateFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="startDate">Start Date:</label>
+              <input type="date" id="startDate" />
+              <label for="endDate">End Date:</label>
+              <input type="date" id="endDate" />
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyDateFilters()">Apply</button>
+              <button onclick="closeDateFilterPopup()">Cancel</button>
+            </div>
+          </div>
+          
+          <script src="stationFilter.js"></script>           
+    </div><!-- this is the end of the main content portion-->
+  </main>
   </body>
 </html>

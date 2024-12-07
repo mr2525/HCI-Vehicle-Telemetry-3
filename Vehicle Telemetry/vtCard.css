@@ -104,8 +104,7 @@ body {
 }
 /*#endregion*/
 
-/*position*/
-/*#region*/
+/*#region user's position i.e. regional manager*/
 .regional-manager .overlap-wrapper {
       position: absolute;
       width: 100%;
@@ -133,11 +132,9 @@ body {
       line-height: normal;
       text-decoration: underline;
 }
-    
 /*#endregion*/
     
-/*dash button*/
-/*#region*/
+/*#region dashboard button*/
 .regional-manager .dashboard-tab {
       position: absolute;
       width: 100%;
@@ -150,7 +147,7 @@ body {
       position: relative;
       width: 212px;
       height: 48px;
-      background-color: #4e148c;
+      background-color: #ffffff;
 }
     
 .regional-manager .text-wrapper-5 {
@@ -160,7 +157,7 @@ body {
       left: 8px;
       font-family: "Arial-Regular", Helvetica;
       font-weight: 400;
-      color: #ffffff;
+      color: #000000;
       font-size: 20px;
       letter-spacing: 0;
       line-height: normal;
@@ -168,13 +165,43 @@ body {
 }
 /*#endregion*/
 
-/*settings word*/
-/*#region*/
+/*#region vehicle telemetry button*/
+.regional-manager .VT-tab {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  top: 270px;
+  left: 10px;
+}
+
+.regional-manager .overlap-2 {
+  position: relative;
+  width: 212px;
+  height: 48px;
+  background-color: #4e148c;
+}  
+    
+.regional-manager .text-wrapper-4 {
+  position: absolute;
+  width: 160px;
+  top: 12px;
+  left: 8px;
+  font-family: "Arial-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+    
+/*#endregion*/
+
+/*#region settings button*/
 .regional-manager .settings {
       position: absolute;
       width: 100%;
       height: 48px;
-      top: 270px;
+      top: 321px;
       left: 10px;
 }  
     
@@ -199,38 +226,6 @@ body {
 }
 /*#endregion*/
 
-
-/*vehicle temematry button*/
-/*#region*/
-.regional-manager .VT-tab {
-  position: absolute;
-  width: 100%;
-  height: 48px;
-  top: 321px;
-  left: 10px;
-}
-
-.regional-manager .overlap-2 {
-  position: relative;
-  width: 212px;
-  height: 48px;
-  background-color: #ffffff;
-}  
-    
-.regional-manager .text-wrapper-4 {
-  position: absolute;
-  width: 160px;
-  top: 12px;
-  left: 8px;
-  font-family: "Arial-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-    
-/*#endregion*/
 /*#endregion*/
     
 /*#region screen area with main info*/
@@ -463,8 +458,7 @@ body {
   }
 /*#endregion*/
 
-/* Filter functionailty */
-/*#region */
+/*#region Filter functionailty */
 .overlay {
   position: fixed;
   top: 0;
