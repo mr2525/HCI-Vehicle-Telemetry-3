@@ -3,19 +3,19 @@ body {
   margin:0; 
 }
 .regional-manager {
-    background-color: #4e148c;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+  background-color: #4e148c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 .regional-manager .overlap-wholescreen {
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: fixed;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
 /*#region top banner*/
@@ -48,189 +48,181 @@ body {
   
 /*sidebar container*/
 .regional-manager .sidebar {
-    background-color: #d9d9d9;
-    width: 219px;
-    height: 100%;
-    top: 100px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: scroll;
-    scrollbar-width: thin;
+  background-color: #d9d9d9;
+  width: 219px;
+  height: 100%;
+  top: 100px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+  scrollbar-width: thin;
 }
     
-  /*profile*/
-  /*#region profile + name*/
+/*profile*/
+/*#region profile + name*/
 .regional-manager .user-info {
-      position: absolute;
-      width: 214px;
-      height: 100%;
-      text-align: center;
-    
+  position: absolute;
+  width: 214px;
+  height: 100%;
+  text-align: center;    
 }
 
 .regional-manager .overlap-4 {
-      position: absolute;
-      width: 100%;
-      height: 130px;
-      top: 10px;
-      
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  top: 10px;       
 }
 
 .regional-manager .user-image {
-    position: relative;
-    width: 170px;
-    height: 130px;
-    object-fit: cover;
-      
+  position: relative;
+  width: 170px;
+  height: 130px;
+  object-fit: cover;
 }
 
     
 .regional-manager .text-wrapper-7 {
-      position: relative;
-      width: 100%;
-      top: 0;
-      left: 0;
-      font-family: "Arial-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 24px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal; 
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Arial-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal; 
 }
 /*#endregion*/
 
-/*position*/
-/*#region*/
+/*#region position*/
 .regional-manager .overlap-wrapper {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 170px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 170px;
 }
 
 .regional-manager .overlap-3 {
-      position: relative;
-      width: 219px;
-      height: 100%;
+  position: relative;
+  width: 219px;
+  height: 100%;
 }
       
 .regional-manager .text-wrapper-6 {
-      position: relative;
-      width: 100%;
-      top: 0;
-      left: 0;
-      font-family: "Arial-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 22px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      text-decoration: underline;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Arial-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
 }
     
 /*#endregion*/
     
-/*dash button*/
-/*#region*/
+/*#region dashboard button*/
 .regional-manager .dashboard-tab {
-      position: absolute;
-      width: 100%;
-      height: 48px;
-      top: 220px;
-      left: 10px;
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  top: 220px;
+  left: 10px;
 }
-    
+
 .regional-manager .div-wrapper {
-      position: relative;
-      width: 212px;
-      height: 48px;
-      background-color: #4e148c;
+  position: relative;
+  width: 212px;
+  height: 48px;
+  background-color: #ffffff;
 }
-    
+
 .regional-manager .text-wrapper-5 {
-      position: relative;
-      width: 100%;
-      top: 12px;
-      left: 8px;
-      font-family: "Arial-Regular", Helvetica;
-      font-weight: 400;
-      color: #ffffff;
-      font-size: 20px;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
+  position: relative;
+  width: 100%;
+  top: 12px;
+  left: 8px;
+  font-family: "Arial-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
 }
 /*#endregion*/
 
-/*settings word*/
-/*#region*/
-.regional-manager .settings {
-      position: absolute;
-      width: 100%;
-      height: 48px;
-      top: 270px;
-      left: 10px;
+/*#region vehicle telemetry button*/
+.regional-manager .VT-tab {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  top: 270px;
+  left: 10px;
+}
+
+.regional-manager .overlap-2 {
+  position: relative;
+  width: 212px;
+  height: 48px;
+  background-color: #4e148c;
 }  
-    
+
+.regional-manager .text-wrapper-4 {
+  position: absolute;
+  width: 160px;
+  top: 12px;
+  left: 8px;
+  font-family: "Arial-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/*#endregion*/
+
+/*#region settings button*/
+.regional-manager .settings {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  top: 321px;
+  left: 10px;
+}  
+
 .regional-manager .div-wrapper-2 {
-      position: relative;
-      width: 212px;
-      height: 48px;
-      background-color: #ffffff;
-}
-    
+  position: relative;
+  width: 212px;
+  height: 48px;
+  background-color: #ffffff;
+  }
+
 .regional-manager .text-wrapper-3 {
-      position: absolute;
-      width: 94px;
-      top: 11px;
-      left: 8px;
-      font-family: "Arial-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 20px;
-      letter-spacing: 0;
-      line-height: normal;
+  position: absolute;
+  width: 94px;
+  top: 11px;
+  left: 8px;
+  font-family: "Arial-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
 }
-    /*#endregion*/
-
-    /*vehicle temematry button*/
-    /*#region*/
-    .regional-manager .VT-tab {
-      position: absolute;
-      width: 100%;
-      height: 48px;
-      top: 321px;
-      left: 10px;
-    }
-
-    .regional-manager .overlap-2 {
-      position: relative;
-      width: 212px;
-      height: 48px;
-      background-color: #ffffff;
-      
-    }  
+/*#endregion*/
     
-    .regional-manager .text-wrapper-4 {
-      position: absolute;
-      width: 160px;
-      top: 12px;
-      left: 8px;
-      font-family: "Arial-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 20px;
-      letter-spacing: 0;
-      line-height: normal;
-    }
-    
-  /*#endregion*/
-    
-  /*screen area with main info*/
+/*screen area with main info*/
   .regional-manager .main_content {
     background-color: #ffffff;
     overflow: scroll;
