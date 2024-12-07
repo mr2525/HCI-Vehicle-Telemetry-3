@@ -1,121 +1,117 @@
 body {
     padding:0;
     margin:0; 
-  }
-  .regional-manager {
-      background-color: #4e148c;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-  }
+}
+.regional-manager {
+  background-color: #4e148c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
   
-  .regional-manager .overlap-wholescreen {
-      background-color: #ffffff;
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      position: fixed;
-  }
+.regional-manager .overlap-wholescreen {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
   
-  /*#region top banner*/
+/*#region top banner*/
   
-  /*top bar*/
-  .regional-manager .top-banner {
-    background-color: #4e148c;
-    position: fixed;
-    width: 100%;
-    height: 100%;    
-  }
+/*top bar*/
+.regional-manager .top-banner {
+  background-color: #4e148c;
+  position: fixed;
+  width: 100%;
+  height: 100%;    
+}
         
-  /*top bar container*/
-  .regional-manager .overlap-group {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+/*top bar container*/
+.regional-manager .overlap-group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
       
-  /*fedex pic*/
-  .regional-manager .fedex-logo {
-    position: relative;
-    width: 240px;
-    height: 100px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-  }
-  /*#endregion*/
+/*fedex pic*/
+.regional-manager .fedex-logo {
+  position: relative;
+  width: 240px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+/*#endregion*/
     
-  /*sidebar container*/
-  .regional-manager .sidebar {
-      background-color: #d9d9d9;
-      width: 219px;
-      height: 100%;
-      top: 100px;
-      position: fixed;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      overflow: scroll;
-      scrollbar-width: thin;
-  }
+/*sidebar container*/
+.regional-manager .sidebar {
+  background-color: #d9d9d9;
+  width: 219px;
+  height: 100%;
+  top: 100px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+  scrollbar-width: thin;
+}
       
-    /*profile*/
-    /*#region profile + name*/
-  .regional-manager .user-info {
-        position: absolute;
-        width: 214px;
-        height: 100%;
-        text-align: center;
-      
-  }
+/*profile*/
+/*#region profile + name*/
+.regional-manager .user-info {
+  position: absolute;
+  width: 214px;
+  height: 100%;
+  text-align: center;    
+}
   
-  .regional-manager .overlap-4 {
-        position: absolute;
-        width: 100%;
-        height: 130px;
-        top: 10px;
-        
-  }
+.regional-manager .overlap-4 {
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  top: 10px;       
+}
   
-  .regional-manager .user-image {
-      position: relative;
-      width: 170px;
-      height: 130px;
-      object-fit: cover;
-        
-  }
+.regional-manager .user-image {
+  position: relative;
+  width: 170px;
+  height: 130px;
+  object-fit: cover;
+}
   
       
-  .regional-manager .text-wrapper-7 {
-        position: relative;
-        width: 100%;
-        top: 0;
-        left: 0;
-        font-family: "Arial-Regular", Helvetica;
-        font-weight: 400;
-        color: #000000;
-        font-size: 24px;
-        text-align: center;
-        letter-spacing: 0;
-        line-height: normal; 
-  }
-  /*#endregion*/
+.regional-manager .text-wrapper-7 {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Arial-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal; 
+}
+/*#endregion*/
   
-  /*position*/
-  /*#region*/
-  .regional-manager .overlap-wrapper {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 170px;
-  }
+/*#region position*/
+.regional-manager .overlap-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 170px;
+}
   
-  .regional-manager .overlap-3 {
-        position: relative;
-        width: 219px;
-        height: 100%;
-  }
+.regional-manager .overlap-3 {
+  position: relative;
+  width: 219px;
+  height: 100%;
+}
         
 .regional-manager .text-wrapper-6 {
   position: relative;
