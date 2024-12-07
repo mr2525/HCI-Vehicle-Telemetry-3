@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fedex Vehicle Telemetry</title>
+    <link rel="stylesheet" href="vtVehicle.css" />
+  </head>
+  <body>
+    <div class="regional-manager">
+      <div class="overlap-wholescreen">
+        <div class="top-banner">
+          <div class="overlap-group">
+            <img class="fedex-logo" src="../Images/FedEx-Logo-Square.png" />
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="user-info">
+            <div class="overlap-4">
+              <img class="user-image" src="../Images/Fillis.png" />
+              <div class="text-wrapper-7">Hello, Fillis!</div>
+            </div>
+          </div>
+          <div class="overlap-wrapper">
+            <div class="overlap-3">
+            <div class="text-wrapper-6">Regional Manager</div>
+            </div>
+          </div>
+          <a href="../Management Dashboard/Dashboard.html"> 
+                <div class="dashboard-tab"> 
+                <div class="div-wrapper">
+                    <div class="text-wrapper-5">Dashboard</div>
+                </div>
+                </div>
+          </a>
+          <a href="../Settings/settings.html">
+                <div class="settings">
+                <div class="div-wrapper-2">
+                    <div class="text-wrapper-3">Settings</div>
+                </div>
+                </div>
+          </a>  
+          <a href="../Vehicle Telemetry/vtCard.html">
+                <div class="VT-tab">
+                <div class="overlap-2">
+                    <div class="text-wrapper-4">Vehicle Telemetry</div>
+                </div>
+                </div>
+          </a>
+        </div>
+        <div class="main_content">
+          <div class="top-bar">
+            <div class="overlap-magnifying-glass">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search by Vehicle ID #"
+              />
+              <div class="magnifying-glass-icon">🔍</div>
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-button" onclick="openFilterPopup()">
+                Station <span class="expand-arrow">▼</span>
+              </button>
+              <button class="filter-button" onclick="openDateFilterPopup()">
+                Date <span class="expand-arrow">▼</span>
+              </button>
+            </div>
+            <div class="view-buttons">
+              <button class="square-button grid-view">
+                <!-- Button with 9 small squares -->
+                <div class="icon-grid">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              </button>
+              <button class="square-button list-view">
+                <!-- Button with 3 horizontal rectangles -->
+                <div class="icon-list">
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                </div>
+              </button>
+            </div>
+          </div> <!--top-bar-->
+          <!-- Filter Buttons -->
+          <div class="filter-container">
+            <div class="active-filters">
+              <button class="filter-tag">Eastern <span class="close-filter">✖</span></button>
+              <button class="filter-tag">Founders <span class="close-filter">✖</span></button>
+              <button class="filter-tag">Massachusetts <span class="close-filter">✖</span></button>
+              <button class="filter-tag">OWDA <span class="close-filter">✖</span></button>
+            </div>
+          </div>
+
+          <!-- Station filter pop-up -->
+          <div class="filter-popup" id="filterPopup">
+            <div class="popup-header">
+              <span class="popup-title">Station Filter</span>
+              <button class="close-popup" onclick="closeFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="region">Region:</label>
+              <select id="region">
+                <option value="Eastern">Eastern</option>
+                <option value="Western">Western</option>
+                <!-- Add more regions as needed -->
+              </select>
+              <label for="district">District:</label>
+              <select id="district">
+                <option value="Founders">Founders</option>
+                <option value="Pioneers">Pioneers</option>
+                <!-- Add more districts as needed -->
+              </select>
+              <label for="state">State:</label>
+              <select id="state">
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="California">California</option>
+                <!-- Add more states as needed -->
+              </select>
+              <label for="station">Station:</label>
+              <select id="station">
+                <option value="OWDA">OWDA</option>
+                <option value="CEFA">CEFA</option>
+                <option value="BOSA">BOSA</option>
+              </select>
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyFilters()">Apply</button>
+              <button onclick="closeFilterPopup()">Cancel</button>
+            </div>
+          </div> <!-- end filter pop-up -->
+
+          <!-- Date Filter Popup -->
+          <div id="dateFilterPopup" class="filter-popup hidden">
+            <div class="popup-header">
+              <span class="popup-title">Date Filter</span>
+              <button class="close-popup" onclick="closeDateFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="startDate">Start Date:</label>
+              <input type="date" id="startDate" />
+              <label for="endDate">End Date:</label>
+              <input type="date" id="endDate" />
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyDateFilters()">Apply</button>
+              <button onclick="closeDateFilterPopup()">Cancel</button>
+            </div>
+          </div> <!-- END Station filter pop-up -->
+
+          <!-- Route Tracking and Maintenance & Use Tabs 
+          <div class="tab-container">
+            <button class="tab" onclick="openTab('routeTracking')">Route Tracking</button>
+            <button class="tab active" onclick="openTab('maintenanceUse')">Maintenance & Use</button>
+          </div> -->
+          <div class="tabs">
+            <button class="tab-button" onclick="showTab(0)">Route Tracking</button>
+            <button class="tab-button" onclick="showTab(1)">Maintenance & Use</button>
+          </div>
+
+          <!-- Route Tracking -->
+          <div class="tab-content">
+            <div class="tab" id="tab-0">
+              <h2>Content for Route tracking</h2>
+              <p>This is the content displayed when Tab 1 is active.</p>
+            </div> <!-- end route tracking -->
+
+            <!-- Maintenance & Use Content -->
+            <div class="tab" id="tab-1">
+              <div class="vehicle-details-container">
+                <!-- Left Column -->
+                <div class="vehicle-layout">
+                  <div class="left-column">
+                    <!-- Vehicle Number -->
+                    <div class="vehicle-id">
+                      <h2>Vehicle #10156</h2>
+                    </div>
+                    <!-- Vehicle Image -->
+                    <div class="vehicle-image">
+                      <img src="../Images/fedex-truck.png" alt="FedEx Truck" />
+                    </div>
+                    <!-- Alerts -->
+                    <div class="vehicle-alerts">
+                      <h3>Alerts</h3>
+                      <p>⚠️ Engine check required!</p>
+                      <p>🚨 Oil change overdue!</p>
+                    </div>
+                    <!-- Current Maintenance -->
+                    <div class="current-maintenance">
+                      <h3>Current Maintenance</h3>
+                      <p>Engine tune-up in progress</p>
+                      <p>Last updated: 12/06/2024</p>
+                    </div>
+                  </div>
+              
+                  <!-- Right Column -->
+                  <div class="right-column">
+                    <!-- Vehicle Specs -->
+                    <div class="vehicle-specs">
+                      <h3>Vehicle Specifications</h3>
+                      <ul>
+                        <li>Model: 2024 Nissan Rogue</li>
+                        <li>VIN: 5N1AT2MV4LC123456</li>
+                        <li>Mileage: 24,500 miles</li>
+                        <li>Fuel Type: Gasoline</li>
+                      </ul>
+                    </div>
+                    <!-- Vehicle Use History -->
+                    <div class="vehicle-use-history">
+                      <h3>Vehicle Use History</h3>
+                      <ul>
+                        <li>12/01/2024: Delivered 200 packages</li>
+                        <li>11/29/2024: Maintenance scheduled</li>
+                        <li>11/25/2024: 300-mile route completed</li>
+                      </ul>
+                    </div>
+                    <!-- Vehicle Maintenance History -->
+                    <div class="vehicle-maintenance-history">
+                      <h3>Maintenance History</h3>
+                      <ul>
+                        <li>11/20/2024: Tire rotation</li>
+                        <li>11/10/2024: Oil change</li>
+                        <li>10/30/2024: Brake pad replacement</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div> <!-- end maintanence -->
+          </div>
+          <script src="stationFilter.js"></script>  <!--be sure to update location to where ever stationFilter.js ends up -->
+        </div> <!-- end main content -->
+      </div>
+    </div>
+  </body>
+</html>
