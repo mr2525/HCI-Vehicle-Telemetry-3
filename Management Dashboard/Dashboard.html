@@ -25,14 +25,140 @@
         <!--div class="divider"></div-->
         <div class="tab-container">
             <ul class="nav-links">
-                <li><a href="../Management Dashboard/Dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="../Management Dashboard/Dashboard.html" class="nav-link active">Dashboard</a></li>
                 <li><a href="../Vehicle Telemetry/vtCard.html" class="nav-link">Vehicle Telemetry</a></li>
-                <li><a href="../Settings/settings.html" class="nav-link active">Settings</a></li>
+                <li><a href="../Settings/settings.html" class="nav-link">Settings</a></li>
             </ul>
         </div>
    </nav>
    <main class="main-container">
       <div class="content">
+        <div class="top-bar">
+            <div class="overlap-magnifying-glass">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search by Vehicle ID #"
+              />
+              <div class="magnifying-glass-icon">🔍</div>
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-button" onclick="openFilterPopup()">
+                Station <span class="expand-arrow">▼</span>
+              </button>
+              <button class="filter-button" onclick="openDateFilterPopup()">
+                Date <span class="expand-arrow">▼</span>
+              </button>
+            </div>
+            <div class="view-buttons">
+              <button class="square-button grid-view">
+                <!-- Button with 9 small squares -->
+                <div class="icon-grid">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              </button>
+              <button class="square-button list-view">
+                <!-- Button with 3 horizontal rectangles -->
+                <div class="icon-list">
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                  <div class="list-line"></div>
+                </div>
+              </button>
+            </div>
+          </div> <!--top-bar-->
+          <!-- Filter Buttons -->
+          <div class="filter-container">
+            <div class="active-filters">
+              
+            </div>
+          </div>
+
+          <!-- Station filter pop-up -->
+          <div class="filter-popup" id="filterPopup">
+            <div class="popup-header">
+              <span class="popup-title">Station Filter</span>
+              <button class="close-popup" onclick="closeFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="region">Region:</label>
+              <select id="region">
+                <option value="Eastern">Eastern</option>
+                <option value="Western">Western</option>
+                <!-- Add more regions as needed -->
+              </select>
+              <label for="district">District:</label>
+              <select id="district">
+                <option value="Founders">Founders</option>
+                <option value="Pioneers">Pioneers</option>
+                <!-- Add more districts as needed -->
+              </select>
+              <label for="state">State:</label>
+              <select id="state">
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="California">California</option>
+                <!-- Add more states as needed -->
+              </select>
+              <label for="station">Station:</label>
+              <select id="station">
+                <option value="OWDA">OWDA</option>
+                <option value="CEFA">CEFA</option>
+                <option value="BOSA">BOSA</option>
+              </select>
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyFilters()">Apply</button>
+              <button onclick="closeFilterPopup()">Cancel</button>
+            </div>
+          </div> <!-- end filter pop-up -->
+
+          <!-- Date Filter Popup -->
+          <div id="dateFilterPopup" class="filter-popup hidden">
+            <div class="popup-header">
+              <span class="popup-title">Date Filter</span>
+              <button class="close-popup" onclick="closeDateFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="startDate">Start Date:</label>
+              <input type="date" id="startDate" />
+              <label for="endDate">End Date:</label>
+              <input type="date" id="endDate" />
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyDateFilters()">Apply</button>
+              <button onclick="closeDateFilterPopup()">Cancel</button>
+            </div>
+          </div>
+          <!-- END Station filter pop-up -->
+
+          <!-- Vehicle Maintenance Section -->
+          <section class="vehicle-maintenance">
+            <h2>Vehicle Maintenance</h2>
+            <div class="chart-container">
+              <canvas id="maintenanceChart"></canvas>
+            </div>
+          </section>
+
+          <!-- Vehicle Average Metrics Graph -->
+          <section class="vehicle-metrics">
+            <h2>Vehicle Average Metrics</h2>
+            <div class="chart-container">
+              <canvas id="metricsChart"></canvas>
+            </div>
+          </section>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-boxplot@1.0.0/dist/chartjs-chart-boxplot.min.js"></script>
+          <script src="dashboard.js"></script>
+          <script src="../Vehicle Telemetry/stationFilter.js"></script> <!-- be sure to update location to where ever stationFilter.js ends up -->
       </div>
    </main>
 </body>
