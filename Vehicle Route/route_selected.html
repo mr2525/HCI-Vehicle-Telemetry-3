@@ -66,6 +66,7 @@
                 Date <span class="expand-arrow">▼</span>
               </button>
             </div>
+          
 
 
           <!-- Filter Buttons -->
@@ -87,6 +88,7 @@
               <select id="region">
                 <option value="Eastern">Eastern</option>
                 <option value="Western">Western</option>
+
                 <!-- Add more regions as needed -->
               </select>
               <label for="district">District:</label>
@@ -134,14 +136,66 @@
 
           <script src="vehicleRouteFilter.js"></script>  
 
-          <div class="map-container">
+          <!--<div class="map-container">
             Vehicle #10156
             <img
               src="../Images/vtRouteTrackingMap.png"
               width="550"
               height="550"
               down=""
-              left=""
+              left=""-->
+
+              <div class="container">
+                <div class="tabs">
+                    <button class="tab active" onclick="showTab('route-tracking')">Route Tracking</button>
+                    <button class="tab" onclick="showTab('maintenance-use')">Maintenance & Use</button>
+                </div>
+        
+                <div id="route-tracking" class="tab-content active">
+                    <h1>Vehicle #10156</h1>
+                    <div class="content-container">
+                        <div class="map-container">
+                            <img src="../Images/vtRouteTrackingMap.png" alt="Route Map" class="map">
+                        </div>
+                        <div class="timeline">
+                          <div class="timeline-line"></div>
+                            <div class="timeline-event">
+                                <div class="circle"></div>
+                                <div class="event-details">
+                                    <p>12:00</p>
+                                    <p>Station departure</p>
+                                    <p>12 miles</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event">
+                                <div class="circle"></div>
+                                <div class="event-details">
+                                    <p>12:15</p>
+                                    <p>Stop 1 - Time elapsed 0:10</p>
+                                    <p>12 miles</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event">
+                                <div class="circle"></div>
+                                <div class="event-details">
+                                    <p>12:45</p>
+                                    <p>Stop 2 - Time elapsed 0:05</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                          
+                          
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="maintenance-use" class="tab-content">
+                    <h1>Maintenance & Use</h1>
+                    <p>Maintenance data goes here.</p>
+                </div>
+            </div>
+
+
             ></img>
           </div>           
         </div>
@@ -149,3 +203,66 @@
     </div>
   </body>
 </html>
+
+
+<!--Trying to so map section for testing purposes-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Telemetry</title>
+    <link rel="stylesheet" href="route_selected.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('route-tracking')">Route Tracking</button>
+            <button class="tab" onclick="showTab('maintenance-use')">Maintenance & Use</button>
+        </div>
+
+        <div id="route-tracking" class="tab-content active">
+            <h1>Vehicle #10156</h1>
+            <div class="content-container">
+                <div class="map-container">
+                    <img src="../Images/vtRouteTrackingMap.png" alt="Route Map" class="map">
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <div class="circle"></div>
+                        <div class="event-details">
+                            <p>12:00</p>
+                            <p>Station departure</p>
+                            <p>12 miles</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="circle"></div>
+                        <div class="event-details">
+                            <p>12:15</p>
+                            <p>Stop 1 - Time elapsed 0:10</p>
+                            <p>12 miles</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="circle"></div>
+                        <div class="event-details">
+                            <p>12:45</p>
+                            <p>Stop 2 - Time elapsed 0:05</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="maintenance-use" class="tab-content">
+            <h1>Maintenance & Use</h1>
+            <p>Maintenance data goes here.</p>
+        </div>
+    </div>
+
+    <script src="vehicleRouteFilter.js"></script>
+</body>
+</html>-->
+
