@@ -1,136 +1,134 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  /*banner*/
-  .header {
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: #4e148c;
-  }
-  
-  .header-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .logo {
-    position: absolute;
-    width: 240px;
-    height: 100px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-  }
-  /*sidebar*/
-  .sidebar {
-    width: 210px;
-    height: 100%;
-    top: 100px;
-    left: 0;
-    background-color: #d9d9d9;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  .user-info {
-    position: absolute;
-    width: 219px;
-    height: 100%;
-    text-align: center;
-  }
-  
-  .user1half-container {
-    position: absolute;
-    width: 100%;
-    height: 130px;
-    top: 10px;
-  }
-  
-  .user-profile {
-    position: relative;
-    width: 170px;
-    height: 130px;
-    object-fit: cover;
-  }
-  
-  .user-name {
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
-    font-family: "Arial-Regular", Helvetica;
-    font-weight: 400;
-    color: black;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .user2half-container {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    top: 163px;
-  }
-  
-  .user-position {
-    position: relative;
-    width: 100%;
-    top: 7px;
-    left: 0;
-    font-family: "Arial-Bold", Helvetica;
-    font-weight: 700;
-    text-decoration: underline;
-    color: #000000;
-    font-size: 22px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .tab-container {
-    position: absolute;
-    width: 100%;
-    height: 700px;
-    top: 213px;
-    left: 0;
-  }
-  
-  .nav-links {
-    list-style: none;
-    padding: 5px;
-    margin: 0;
-    width: 100%;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: black;
-    display: block;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family: "Arial-Regular", Helvetica;
-    background-color: white;
-    margin-bottom: 5px;
-  }
-  
-  .nav-link:hover, .nav-link.active {
-    background-color: #4e148c;
-    color: white;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/*banner*/
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #4e148c;
+}
+
+.header-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  width: 240px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+/*sidebar*/
+.sidebar {
+  width: 219px;
+  height: 100%;
+  top: 100px;
+  left: 0;
+  background-color: #d9d9d9;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.user-info {
+  position: absolute;
+  width: 219px;
+  height: 100%;
+  text-align: center;
+}
+
+.user1half-container {
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  top: 10px;
+}
+
+.user-profile {
+  position: relative;
+  width: 170px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.user-name {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Arial-Regular", Helvetica;
+  font-weight: 400;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.user2half-container {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 170px;
+}
+
+.user-position {
+  position: relative;
+  width: 100%;
+  font-family: "Arial-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 22px;
+  text-align: center;
+  line-height: normal;
+  text-decoration: underline;
+}
+
+.tab-container {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  top: 210px;
+  left: 0;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Arial-Regular", Helvetica;
+  background-color: white;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: #4e148c;
+  color: white;
+}
   
   /*content screen*/
   .main-container {
