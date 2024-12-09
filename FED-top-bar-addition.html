@@ -2,101 +2,72 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>FedEx Vehicle Telemetry</title>
-    <!-- Link to external CSS file for styling -->
-    <link rel="stylesheet" href="vtCard2.css" />
+    <title>Fedex Vehicle Telemetry</title>
+    <link rel="stylesheet" href="vtCard.css" />
   </head>
   <body>
     <div class="regional-manager">
-      <!-- Main container for the screen -->
       <div class="overlap-wholescreen">
-        
-        <!-- Top Banner Section -->
         <div class="top-banner">
           <div class="overlap-group">
-            <!-- FedEx logo -->
             <img class="fedex-logo" src="../Images/FedEx-Logo-Square.png" />
           </div>
         </div>
-
-        <!-- Sidebar Section -->
         <div class="sidebar">
-          <!-- User Info Section -->
           <div class="user-info">
             <div class="overlap-4">
-              <!-- User Profile Picture -->
               <img class="user-image" src="../Images/Fillis.png" />
-              <!-- User Greeting -->
               <div class="text-wrapper-7">Hello, Fillis!</div>
             </div>
           </div>
-
-          <!-- User Role Section -->
           <div class="overlap-wrapper">
             <div class="overlap-3">
-              <div class="text-wrapper-6">Regional Manager</div>
+            <div class="text-wrapper-6">Regional Manager</div>
             </div>
           </div>
-
-          <!-- Sidebar Navigation Links -->
           <a href="../Management Dashboard/Dashboard.html"> 
-            <div class="dashboard-tab"> 
-              <div class="div-wrapper">
-                <div class="text-wrapper-5">Dashboard</div>
-              </div>
-            </div>
+                <div class="dashboard-tab"> 
+                <div class="div-wrapper">
+                    <div class="text-wrapper-5">Dashboard</div>
+                </div>
+                </div>
           </a>
-
           <a href="../Settings/settings.html">
-            <div class="settings">
-              <div class="div-wrapper-2">
-                <div class="text-wrapper-3">Settings</div>
-              </div>
-            </div>
+                <div class="settings">
+                <div class="div-wrapper-2">
+                    <div class="text-wrapper-3">Settings</div>
+                </div>
+                </div>
           </a>  
-
           <a href="../Vehicle Telemetry/vtCard.html">
-            <div class="VT-tab">
-              <div class="overlap-2">
-                <div class="text-wrapper-4">Vehicle Telemetry</div>
-              </div>
-            </div>
+                <div class="VT-tab">
+                <div class="overlap-2">
+                    <div class="text-wrapper-4">Vehicle Telemetry</div>
+                </div>
+                </div>
           </a>
-        </div> <!-- End of Sidebar -->
-
-        <!-- Main Content Section -->
+        </div>
         <div class="main_content">
-          <!-- Top Bar Section -->
           <div class="top-bar">
-            <!-- Search Input Section -->
             <div class="overlap-magnifying-glass">
-              <!-- Search bar -->
               <input
                 type="text"
                 class="search-input"
                 placeholder="Search by Vehicle ID #"
               />
-              <!-- Magnifying Glass Icon -->
               <div class="magnifying-glass-icon">🔍</div>
             </div>
-
-            <!-- Filter Buttons Section -->
             <div class="filter-buttons">
-              <!-- Station Filter Button -->
-              <button class="filter-button">
+              <button class="filter-button" onclick="openFilterPopup()">
                 Station <span class="expand-arrow">▼</span>
               </button>
-              <!-- Date Filter Button -->
-              <button class="filter-button">
+              <button class="filter-button" onclick="openDateFilterPopup()">
                 Date <span class="expand-arrow">▼</span>
               </button>
             </div>
-
-            <!-- View Toggle Buttons -->
             <div class="view-buttons">
-              <!-- Grid View Button -->
               <button class="square-button grid-view">
-                <!-- Icon representing grid view -->
+                <!-- Button with 9 small squares -->
                 <div class="icon-grid">
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
@@ -109,9 +80,8 @@
                   <div class="grid-cell"></div>
                 </div>
               </button>
-              <!-- List View Button -->
               <button class="square-button list-view">
-                <!-- Icon representing list view -->
+                <!-- Button with 3 horizontal rectangles -->
                 <div class="icon-list">
                   <div class="list-line"></div>
                   <div class="list-line"></div>
@@ -120,8 +90,75 @@
                 </div>
               </button>
             </div>
-          </div> <!-- End of Top Bar -->
-        </div> <!-- End of Main Content -->
+          </div> <!--top-bar-->
+          <!-- Filter Buttons -->
+          <div class="filter-container">
+            <div class="active-filters">
+              <button class="filter-tag">Eastern <span class="close-filter">✖</span></button>
+              <button class="filter-tag">Founders <span class="close-filter">✖</span></button>
+              <button class="filter-tag">Massachusetts <span class="close-filter">✖</span></button>
+              <button class="filter-tag">OWDA <span class="close-filter">✖</span></button>
+            </div>
+          </div>
+
+          <!-- Station filter pop-up -->
+          <div class="filter-popup" id="filterPopup">
+            <div class="popup-header">
+              <span class="popup-title">Station Filter</span>
+              <button class="close-popup" onclick="closeFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="region">Region:</label>
+              <select id="region">
+                <option value="Eastern">Eastern</option>
+                <option value="Western">Western</option>
+                <!-- Add more regions as needed -->
+              </select>
+              <label for="district">District:</label>
+              <select id="district">
+                <option value="Founders">Founders</option>
+                <option value="Pioneers">Pioneers</option>
+                <!-- Add more districts as needed -->
+              </select>
+              <label for="state">State:</label>
+              <select id="state">
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="California">California</option>
+                <!-- Add more states as needed -->
+              </select>
+              <label for="station">Station:</label>
+              <select id="station">
+                <option value="OWDA">OWDA</option>
+                <option value="CEFA">CEFA</option>
+                <option value="BOSA">BOSA</option>
+              </select>
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyFilters()">Apply</button>
+              <button onclick="closeFilterPopup()">Cancel</button>
+            </div>
+          </div> <!-- end filter pop-up -->
+
+          <!-- Date Filter Popup -->
+          <div id="dateFilterPopup" class="filter-popup hidden">
+            <div class="popup-header">
+              <span class="popup-title">Date Filter</span>
+              <button class="close-popup" onclick="closeDateFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="startDate">Start Date:</label>
+              <input type="date" id="startDate" />
+              <label for="endDate">End Date:</label>
+              <input type="date" id="endDate" />
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyDateFilters()">Apply</button>
+              <button onclick="closeDateFilterPopup()">Cancel</button>
+            </div>
+          </div>
+          <script src="Vehicle Telemetry/stationFilter.js"></script> <!-- be sure to update location to where ever stationFilter.js ends up -->
+          <!-- END Station filter pop-up -->
+        </div>
       </div>
     </div>
   </body>
