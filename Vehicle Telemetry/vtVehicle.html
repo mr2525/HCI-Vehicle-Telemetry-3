@@ -164,76 +164,135 @@
             <button class="tab-button" onclick="showTab(1)">Maintenance & Use</button>
           </div>
 
-          <!-- Route Tracking -->
           <div class="tab-content">
+            <!-- Route Tracking -->
             <div class="tab" id="tab-0">
-              <h2>Content for Route tracking</h2>
-              <p>This is the content displayed when Tab 1 is active.</p>
-            </div> <!-- end route tracking -->
-
-            <!-- Maintenance & Use Content -->
-            <div class="tab" id="tab-1">
-              <div class="vehicle-details-container">
-                <!-- Left Column -->
-                <div class="vehicle-layout">
-                  <div class="left-column">
-                    <!-- Vehicle Number -->
-                    <div class="vehicle-id">
-                      <h2>Vehicle #10156</h2>
-                    </div>
-                    <!-- Vehicle Image -->
-                    <div class="vehicle-image">
-                      <img src="../Images/fedex-truck.png" alt="FedEx Truck" />
-                    </div>
-                    <!-- Alerts -->
-                    <div class="vehicle-alerts">
-                      <h3>Alerts</h3>
-                      <p>⚠️ Engine check required!</p>
-                      <p>🚨 Oil change overdue!</p>
-                    </div>
-                    <!-- Current Maintenance -->
-                    <div class="current-maintenance">
-                      <h3>Current Maintenance</h3>
-                      <p>Engine tune-up in progress</p>
-                      <p>Last updated: 12/06/2024</p>
+              <div id="dynamic-content" class="dynamic-content">
+                <div class="route-container"
+                  <div class="vehicle-id">
+                    <h2>Vehicle #10156</h2>
+                  </div>
+                  <div class="route" data-id="10156">
+                    <div class="div-2">
+                      <div class="text-wrapper-13">Driver: Felix Monaghan</div>
+                      <div class="text-wrapper-14">Station: OWDA</div>
+                      <div class="state">State: MA</div>
+                      <div class="district">District: Founders</div>
+                      <div class="region">Region: Eastern</div>
+                      <div class="text-wrapper-15">Date: 11/10/2024</div>
+                      <div class="text-wrapper-16">Start Time: 03:00 PM</div>
+                      <div class="text-wrapper-17">End Time:</div>
                     </div>
                   </div>
-              
-                  <!-- Right Column -->
-                  <div class="right-column">
-                    <!-- Vehicle Specs -->
-                    <div class="vehicle-specs">
-                      <h3>Vehicle Specifications</h3>
-                      <ul>
-                        <li>Model: 2024 Nissan Rogue</li>
-                        <li>VIN: 5N1AT2MV4LC123456</li>
-                        <li>Mileage: 24,500 miles</li>
-                        <li>Fuel Type: Gasoline</li>
-                      </ul>
-                    </div>
-                    <!-- Vehicle Use History -->
-                    <div class="vehicle-use-history">
-                      <h3>Vehicle Use History</h3>
-                      <ul>
-                        <li>12/01/2024: Delivered 200 packages</li>
-                        <li>11/29/2024: Maintenance scheduled</li>
-                        <li>11/25/2024: 300-mile route completed</li>
-                      </ul>
-                    </div>
-                    <!-- Vehicle Maintenance History -->
-                    <div class="vehicle-maintenance-history">
-                      <h3>Maintenance History</h3>
-                      <ul>
-                        <li>11/20/2024: Tire rotation</li>
-                        <li>11/10/2024: Oil change</li>
-                        <li>10/30/2024: Brake pad replacement</li>
-                      </ul>
+                  <div class="route-2">
+                    <div class="div-2">
+                      <div class="text-wrapper-13">Driver: Felix Monaghan</div>
+                      <div class="text-wrapper-14">Station: OWDA</div>
+                      <div class="state">State: MA</div>
+                      <div class="district">District: Founders</div>
+                      <div class="region">Region: Eastern</div>
+                      <div class="text-wrapper-15">Date: 11/10/2024</div>
+                      <div class="text-wrapper-16">Start Time: 06:30 AM</div>
+                      <div class="text-wrapper-17">End Time:</div>
                     </div>
                   </div>
+                  <div class="route-3">
+                    <div class="div-2">
+                      <div class="text-wrapper-13">Driver: Felix Monaghan</div>
+                      <div class="text-wrapper-14">Station: OWDA</div>
+                      <div class="state">State: MA</div>
+                      <div class="district">District: Founders</div>
+                      <div class="region">Region: Eastern</div>
+                      <div class="text-wrapper-15">Date: 11/09/2024</div>
+                      <div class="text-wrapper-16">Start Time: 06:30 AM</div>
+                      <div class="text-wrapper-17">End Time:</div>
+                    </div>
+                  </div>
+                  <div class="route-4">
+                    <div class="div-2">
+                      <div class="text-wrapper-13">Driver: Felix Monaghan</div>
+                      <div class="text-wrapper-14">Station: OWDA</div>
+                      <div class="state">State: MA</div>
+                      <div class="district">District: Founders</div>
+                      <div class="region">Region: Eastern</div>
+                      <div class="text-wrapper-15">Date: 11/08/2024</div>
+                      <div class="text-wrapper-16">Start Time: 06:30 AM</div>
+                      <div class="text-wrapper-17">End Time:</div>
+                    </div>
+                  </div>
+                </div> <!-- end route tracking routes page -->
+              </div>
+              <div id="secondary-content" class="secondary-content">
+                <div class="vehicle-id">
+                  <h2>AUGHGHGHSJHF</h2>
                 </div>
-              </div>  
-            </div> <!-- end maintanence -->
+              </div>
+
+              <!-- Maintenance & Use Content -->
+              <div class="tab" id="tab-1">
+                <div class="vehicle-details-container">
+                  <!-- Left Column -->
+                  <div class="vehicle-layout">
+                    <div class="left-column">
+                      <!-- Vehicle Number -->
+                      <div class="vehicle-id">
+                        <h2>Vehicle #10156</h2>
+                      </div>
+                      <!-- Vehicle Image -->
+                      <div class="vehicle-image">
+                        <img src="../Images/fedex-truck.png" alt="FedEx Truck" />
+                      </div>
+                      <!-- Alerts -->
+                      <div class="vehicle-alerts">
+                        <h3>Alerts</h3>
+                        <p>⚠️ Engine check required!</p>
+                        <p>🚨 Oil change overdue!</p>
+                      </div>
+                      <!-- Current Maintenance -->
+                      <div class="current-maintenance">
+                        <h3>Current Maintenance</h3>
+                        <p>Engine tune-up in progress</p>
+                        <p>Last updated: 12/06/2024</p>
+                      </div>
+                    </div>
+                
+                    <!-- Right Column -->
+                    <div class="right-column">
+                      <!-- Vehicle Specs -->
+                      <div class="vehicle-specs">
+                        <h3>Vehicle Specifications</h3>
+                        <ul>
+                          <li>Model: 2024 Nissan Rogue</li>
+                          <li>VIN: 5N1AT2MV4LC123456</li>
+                          <li>Mileage: 24,500 miles</li>
+                          <li>Fuel Type: Gasoline</li>
+                        </ul>
+                      </div>
+                      <!-- Vehicle Use History -->
+                      <div class="vehicle-use-history">
+                        <h3>Vehicle Use History</h3>
+                        <ul>
+                          <li>12/01/2024: Delivered 200 packages</li>
+                          <li>11/29/2024: Maintenance scheduled</li>
+                          <li>11/25/2024: 300-mile route completed</li>
+                        </ul>
+                      </div>
+                      <!-- Vehicle Maintenance History -->
+                      <div class="vehicle-maintenance-history">
+                        <h3>Maintenance History</h3>
+                        <ul>
+                          <li>11/20/2024: Tire rotation</li>
+                          <li>11/10/2024: Oil change</li>
+                          <li>10/30/2024: Brake pad replacement</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+              </div> <!-- end maintanence -->
+            </div>
           </div>
+          <script src="routeHandler.js"></script>
           <script src="stationFilter.js"></script>  <!--be sure to update location to where ever stationFilter.js ends up -->
         </div> <!-- end main content -->
       </div>

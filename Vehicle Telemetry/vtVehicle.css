@@ -414,7 +414,7 @@ body {
   
 
   .tab-content {
-    display: block;
+    display: block; 
   }
   
   .tab {
@@ -425,6 +425,168 @@ body {
     display: block;
   }
   /*#endregion
+
+  /*#region Route Tracking */
+  .route-container {
+    position: flex;
+    margin-left: 10px;
+  }
+
+  .regional-manager .route {
+    position: absolute;
+    width: 1225px;
+    height: 100px;
+    margin-left: 10px;
+  }
+
+  .regional-manager .route-2 {
+    position: absolute;
+    width: 1225px;
+    height: 100px;
+    margin-top: 110px;
+    margin-left: 10px;
+  }
+  
+  .regional-manager .route-3 {
+    position: absolute;
+    width: 1225px;
+    height: 100px;
+    margin-top: 220px;
+    margin-left: 10px;
+  }
+  
+  .regional-manager .route-4 {
+    position: absolute;
+    width: 1225px;
+    height: 100px;
+    margin-top: 330px;
+    margin-left: 10px;
+  }
+  
+  .regional-manager .div-2 {
+    position: relative;
+    width: 1209px;
+    height: 99px;
+    background-color: #d9d9d9;
+  }
+  
+  .regional-manager .text-wrapper-13 {
+    position: absolute;
+    width: 250px;
+    top: 63px;
+    left: 12px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .regional-manager .text-wrapper-14 {
+    position: absolute;
+    width: 197px;
+    top: 63px;
+    left: 971px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .regional-manager .state {
+    position: absolute;
+    width: 197px;
+    top: 13px;
+    left: 971px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .regional-manager .district {
+    position: absolute;
+    width: 197px;
+    top: 63px;
+    left: 663px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .regional-manager .region {
+    position: absolute;
+    width: 197px;
+    top: 13px;
+    left: 663px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .regional-manager .text-wrapper-15 {
+    position: absolute;
+    width: 197px;
+    top: 15px;
+    left: 12px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .regional-manager .text-wrapper-16 {
+    position: absolute;
+    width: 232px;
+    top: 13px;
+    left: 343px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .regional-manager .text-wrapper-17 {
+    position: absolute;
+    width: 197px;
+    top: 63px;
+    left: 343px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .secondary-content {
+    display: none; /* Hidden by default */
+  }
+
+  /*#endregion*/
 
   /*#region vtMaintUse*/
   .vehicle-layout {
