@@ -2,72 +2,101 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Fedex Vehicle Telemetry</title>
+    <title>FedEx Vehicle Telemetry</title>
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="vtCard2.css" />
   </head>
   <body>
     <div class="regional-manager">
+      <!-- Main container for the screen -->
       <div class="overlap-wholescreen">
+        
+        <!-- Top Banner Section -->
         <div class="top-banner">
           <div class="overlap-group">
+            <!-- FedEx logo -->
             <img class="fedex-logo" src="../Images/FedEx-Logo-Square.png" />
           </div>
         </div>
+
+        <!-- Sidebar Section -->
         <div class="sidebar">
+          <!-- User Info Section -->
           <div class="user-info">
             <div class="overlap-4">
+              <!-- User Profile Picture -->
               <img class="user-image" src="../Images/Fillis.png" />
+              <!-- User Greeting -->
               <div class="text-wrapper-7">Hello, Fillis!</div>
             </div>
           </div>
+
+          <!-- User Role Section -->
           <div class="overlap-wrapper">
             <div class="overlap-3">
-            <div class="text-wrapper-6">Regional Manager</div>
+              <div class="text-wrapper-6">Regional Manager</div>
             </div>
           </div>
+
+          <!-- Sidebar Navigation Links -->
           <a href="../Management Dashboard/Dashboard.html"> 
-                <div class="dashboard-tab"> 
-                <div class="div-wrapper">
-                    <div class="text-wrapper-5">Dashboard</div>
-                </div>
-                </div>
+            <div class="dashboard-tab"> 
+              <div class="div-wrapper">
+                <div class="text-wrapper-5">Dashboard</div>
+              </div>
+            </div>
           </a>
+
           <a href="../Settings/settings.html">
-                <div class="settings">
-                <div class="div-wrapper-2">
-                    <div class="text-wrapper-3">Settings</div>
-                </div>
-                </div>
+            <div class="settings">
+              <div class="div-wrapper-2">
+                <div class="text-wrapper-3">Settings</div>
+              </div>
+            </div>
           </a>  
+
           <a href="../Vehicle Telemetry/vtCard.html">
-                <div class="VT-tab">
-                <div class="overlap-2">
-                    <div class="text-wrapper-4">Vehicle Telemetry</div>
-                </div>
-                </div>
+            <div class="VT-tab">
+              <div class="overlap-2">
+                <div class="text-wrapper-4">Vehicle Telemetry</div>
+              </div>
+            </div>
           </a>
-        </div>
+        </div> <!-- End of Sidebar -->
+
+        <!-- Main Content Section -->
         <div class="main_content">
+          <!-- Top Bar Section -->
           <div class="top-bar">
+            <!-- Search Input Section -->
             <div class="overlap-magnifying-glass">
+              <!-- Search bar -->
               <input
                 type="text"
                 class="search-input"
                 placeholder="Search by Vehicle ID #"
               />
+              <!-- Magnifying Glass Icon -->
               <div class="magnifying-glass-icon">🔍</div>
             </div>
+
+            <!-- Filter Buttons Section -->
             <div class="filter-buttons">
+              <!-- Station Filter Button -->
               <button class="filter-button">
                 Station <span class="expand-arrow">▼</span>
               </button>
+              <!-- Date Filter Button -->
               <button class="filter-button">
                 Date <span class="expand-arrow">▼</span>
               </button>
             </div>
+
+            <!-- View Toggle Buttons -->
             <div class="view-buttons">
+              <!-- Grid View Button -->
               <button class="square-button grid-view">
-                <!-- Button with 9 small squares -->
+                <!-- Icon representing grid view -->
                 <div class="icon-grid">
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
@@ -80,8 +109,9 @@
                   <div class="grid-cell"></div>
                 </div>
               </button>
+              <!-- List View Button -->
               <button class="square-button list-view">
-                <!-- Button with 3 horizontal rectangles -->
+                <!-- Icon representing list view -->
                 <div class="icon-list">
                   <div class="list-line"></div>
                   <div class="list-line"></div>
@@ -90,8 +120,8 @@
                 </div>
               </button>
             </div>
-          </div> <!--top-bar-->
-        </div>
+          </div> <!-- End of Top Bar -->
+        </div> <!-- End of Main Content -->
       </div>
     </div>
   </body>
