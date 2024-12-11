@@ -25,27 +25,13 @@
             <div class="text-wrapper-6">Regional Manager</div>
             </div>
           </div>
-          <a href="../Management Dashboard/Dashboard.html"> 
-                <div class="dashboard-tab"> 
-                <div class="div-wrapper">
-                    <div class="text-wrapper-5">Dashboard</div>
-                </div>
-                </div>
-          </a>
-          <a href="../Settings/settings.html">
-                <div class="settings">
-                <div class="div-wrapper-2">
-                    <div class="text-wrapper-3">Settings</div>
-                </div>
-                </div>
-          </a>  
-          <a href="../Vehicle Telemetry/vtCard.html">
-                <div class="VT-tab">
-                <div class="overlap-2">
-                    <div class="text-wrapper-4">Vehicle Telemetry</div>
-                </div>
-                </div>
-          </a>
+          <div class="tab-container">
+            <ul class="nav-links">
+                <li><a href="../Management Dashboard/Dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="../Vehicle Telemetry/vtCard.html" class="nav-link active">Vehicle Telemetry</a></li>
+                <li><a href="../Settings/settings.html" class="nav-link">Settings</a></li>
+            </ul>
+          </div>
         </div>
         <div class="main_content">
           <div class="top-bar">
@@ -66,29 +52,33 @@
               </button>
             </div>
             <div class="view-buttons">
-              <button class="square-button grid-view">
-                <!-- Button with 9 small squares -->
-                <div class="icon-grid">
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                </div>
-              </button>
-              <button class="square-button list-view">
-                <!-- Button with 3 horizontal rectangles -->
-                <div class="icon-list">
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                </div>
-              </button>
+                <a href="/Vehicle Telemetry/vtCard.html">
+                    <button class="square-button grid-view">
+                      <!-- Button with 9 small squares -->
+                      <div class="icon-grid">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                      </div>
+                    </button>
+                </a>
+                <a href="/Vehicle Telemetry/vtList.html">
+                    <button class="square-button list-view active">
+                      <!-- Button with 3 horizontal rectangles -->
+                      <div class="icon-list">
+                        <div class="list-line"></div>
+                        <div class="list-line"></div>
+                        <div class="list-line"></div>
+                        <div class="list-line"></div>
+                      </div>
+                    </button>
+                </a>
             </div>
           </div> <!--top-bar-->
           <!-- Filter Buttons -->
@@ -104,13 +94,15 @@
               <h2>Urgent Maintenance</h2>
             </div>
             <div class="maintenance-cards">
-              <div class="maintenance-card">
-                <span class="card-item">#10156 - 2024 Nissan Rouge</span>
-                <span class="card-item">Location: Eastern</span>
-                <span class="card-item">Issue: Engine overheating</span>
-                <span class="card-item">Date Reported: 12/03/2024</span>
-                <span class="card-item">Notes: Immediate action required.</span>
-              </div>
+              <a href="/Vehicle Telemetry/vtVehicle.html" class="vehicle-link">
+                  <div class="maintenance-card">
+                    <span class="card-item">#10156 - 2024 Nissan Rouge</span>
+                    <span class="card-item">Location: Eastern</span>
+                    <span class="card-item">Issue: Engine overheating</span>
+                    <span class="card-item">Date Reported: 12/03/2024</span>
+                    <span class="card-item">Notes: Immediate action required.</span>
+                  </div>
+              </a>
               <div class="maintenance-card">
                 <span class="card-item">#90456 - 2024 Nissan Rouge</span>
                 <span class="card-item">Location: Founders</span>
