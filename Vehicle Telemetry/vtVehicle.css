@@ -395,7 +395,6 @@ body {
   .tab-container {
     display: flex;
     margin-bottom: 20px;
-    margin-left: 10px;
   }
   
   .tab-button {
@@ -404,14 +403,24 @@ body {
     font-size: 16px;
     background-color: #b9b8b8;
     border: none;
-    margin-right: 10px;
+    margin-left: 10px;
     border-radius: 10px 10px 0 0; /* Round the top corners */
   }
 
   .tab-button:hover {
     background-color: #4e148c;
+    color: #ffffff;
   }
-  
+
+  .tab-button:active {
+    background-color: #4e148c;
+    color: #ffffff;
+  }
+
+  .active-tab {
+    background-color: #4e148c;
+    color: #ffffff;
+  }
 
   .tab-content {
     display: block; 
@@ -424,9 +433,9 @@ body {
   #tab-0, #tab-1 {
     display: block;
   }
-  /*#endregion
+  /*#endregion*/
 
-  /*#region Route Tracking */
+  /*#region Route Tracking*/
   .route-container {
     position: flex;
     margin-left: 10px;
@@ -581,11 +590,6 @@ body {
     line-height: normal;
     white-space: nowrap;
   }
-
-  .secondary-content {
-    display: none; /* Hidden by default */
-  }
-
   /*#endregion*/
 
   /*#region vtMaintUse*/
@@ -667,6 +671,101 @@ body {
   }  
   /*#endregion*/
 
+  /*#region route selected */
+
+  .secondary-content {
+    display: none; /* Hidden by default */
+  }
+
+  .secondary-content-container {
+    position: flex;
+    margin-left: 10px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: flex-start; /* Align the search bar to the far left */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .map-image img, .route-timeline-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+  }
+
+  .close-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #e69500;
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+    border-radius: 20px; /* Round the top corners */
+    margin-top: 10px;
+  }
+
+  /*#endregion*/
+
+  /*#region vehicle use/maint history*/
+  .use-history-content-container {
+    position: flex;
+    margin-left: 10px;
+  }
+
+  .maint-history-content-container {
+    position: flex;
+    margin-left: 10px;
+  }
+
+  .table_title_container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    position: relative;
+    background-color: #fff;
+    width: 80%;
+    height: 60px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .use_image {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .table_title {
+    font-size: 40px;
+    font-family: "Arial-Regular", Helvetica;
+    font-weight: bold;
+    padding-left: 20px; 
+    align-self: center;
+  }
+
+  .table-container {
+    position: relative;
+    background-color: #D9D9D9;
+    width: 80%;
+    border-collapse: collapse;
+    padding: 20px;
+    border: 2px solid #000000;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .table-container th, .table-container td {
+    border: 1px solid #000000;
+    font-family: "Arial-Regular", Helvetica;
+  }
+  .table-container thead{
+    /*border: 1px solid #000000;*/
+    background-color: #a7a7a7;
+  }
+
+  /*#endregion*/
 /*#endregion*/
 
 /*#region Filter functionailty */

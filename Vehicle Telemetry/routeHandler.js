@@ -1,45 +1,129 @@
+// Dynamic content update logic
 document.addEventListener("DOMContentLoaded", () => {
-    const routes = document.querySelectorAll(".route");
-    const dynamicContent = document.getElementById("dynamic-content");
-    const secondaryContent = document.getElementById("secondary-content");
-  
-    routes.forEach((route) => {
-      route.addEventListener("click", () => {
-        const routeId = route.dataset.id;
-  
-        // Update the dynamic content with the innerHTML of secondaryContent
-        dynamicContent.innerHTML = secondaryContent.innerHTML;
-  
-        // Optionally, you can add logic to customize the content based on routeId
-        // Example:
-        const vehicleIdElement = dynamicContent.querySelector(".vehicle-id h2");
-        if (vehicleIdElement) {
-          vehicleIdElement.textContent = `Vehicle #${routeId}`;
-        }
-  
-        // Hide the clicked route (optional)
-        route.style.display = "none";
-      });
+  const routes = document.querySelectorAll(".route");
+  const dynamicContent = document.getElementById("dynamic-content");
+  const secondaryContent = document.getElementById("secondary-content");
+
+  const main_maintuse_content = document.getElementById("dynamic-maint-use");
+
+  const listener_usehistory = document.querySelectorAll(".vehicle-use-history");
+  const useHistory = document.getElementById("use-history-content");
+
+  const listener_mainthistory = document.querySelectorAll(".vehicle-maintenance-history");
+  const maintHistory = document.getElementById("maint-history-content");
+
+  routes.forEach((route) => {
+    route.addEventListener("click", () => {
+      dynamicContent.style.display = "none";
+      secondaryContent.style.display = "block";
     });
   });
-  
 
-  // Function to show secondary content
-  function showSecondaryContent(routeId) {
-    const secondaryContent = document.getElementById('secondary-content');
-    secondaryContent.style.display = 'block';
-    
-    const vehicleId = document.querySelector(`.route[data-id="${routeId}"] .vehicle-id h2`);
-    if (vehicleId) {
-      secondaryContent.querySelector('.vehicle-id h2').textContent = vehicleId.textContent;
-    }
+  listener_usehistory.forEach((item) => {
+    item.addEventListener("click", () => {
+      main_maintuse_content.style.display = "none";
+      useHistory.style.display = "block";
+      maintHistory.style.display = "none";
+    });
+  });
+
+  listener_mainthistory.forEach((item) => {
+    item.addEventListener("click", () => {
+      main_maintuse_content.style.display = "none";
+      useHistory.style.display = "none";
+      maintHistory.style.display = "block";
+    });
+  });
+
+  // Initially set main_maintuse_content to be visible
+  main_maintuse_content.style.display = "block";
+  useHistory.style.display = "none";
+  maintHistory.style.display = "none";
+
+});
+
+function maintUseBack() {
+  const main_maintuse_content = document.getElementById("dynamic-maint-use");
+  const useHistory = document.getElementById("use-history-content");
+  const maintHistory = document.getElementById("maint-history-content");
+
+  main_maintuse_content.style.display = "block";
+  useHistory.style.display = "none";
+  maintHistory.style.display = "none";
+}
+
+function routeBack() {
+  const routes = document.querySelectorAll(".route");
+  const dynamicContent = document.getElementById("dynamic-content");
+  const secondaryContent = document.getElementById("secondary-content");
+  dynamicContent.style.display = "block";
+  secondaryContent.style.display = "none";
+}
+
+function showTab(tabIndex, evt) {
+  var i, x, tabbuttons;
+  x = document.getElementsByClassName("tab");
+  
+  // Hide all tabs
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
 
-  // Add event listeners to routes
-  document.querySelectorAll('.route').forEach(route => {
-    route.addEventListener('click', () => {
-      const routeId = route.getAttribute('data-id'); // Get route ID
-      showSecondaryContent(routeId); // Show the secondary content
+  // Select all buttons inside the .tabs container
+  tabbuttons = document.querySelectorAll(".tab-button");
+
+  // Remove 'active-tab' class from all tab buttons
+  for (i = 0; i < tabbuttons.length; i++) {
+    tabbuttons[i].classList.remove("active-tab");
+  }
+
+  // Show the selected tab
+  document.getElementById("tab-" + tabIndex).style.display = "block";
+
+  // Add 'active-tab' class to the clicked tab
+  evt.currentTarget.classList.add("active-tab");
+
+  //resetDynamicContent();
+}
+
+/*
+document.addEventListener("DOMContentLoaded", () => {
+  const routes = document.querySelectorAll(".route");
+  const dynamicContent = document.getElementById("dynamic-content");
+  const secondaryContent = document.getElementById("secondary-content");
+  const dynamicContentBackup = dynamicContent;
+
+  const main_maintuse_content = document.getElementById("dynamic-maint-use");
+
+  const listener_usehistory = document.querySelectorAll(".vehicle-use-history");
+  const useHistory = document.getElementById("use-history-content");
+
+  const listener_mainthistory = document.querySelectorAll(".vehicle-maintenance-history");
+  const maintHistory = document.getElementById("maint-history-content");
+
+  function resetDynamicContent() {
+    dynamicContent.innerHTML = "";
+  }
+  
+  routes.forEach((route) => {
+    route.addEventListener("click", () => {
+      const routeId = route.dataset.id;
+
+      // Update the dynamic content with the innerHTML of secondaryContent
+      dynamicContent.innerHTML = secondaryContent.innerHTML;
+
+      // Customize content based on routeId
+      const vehicleIdElement = dynamicContent.querySelector(".vehicle-id h2");
+      if (vehicleIdElement) {
+        vehicleIdElement.textContent = `Vehicle #${routeId}`;
+      }
+
+      // Optionally hide the clicked route
+      route.style.display = "none";
+
+      // Switch to the Route Tracking tab
+      showTab(0, event);
     });
   });
-
+});
+*/

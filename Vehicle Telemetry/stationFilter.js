@@ -65,17 +65,3 @@ function applyDateFilters() {
   closeDateFilterPopup();
 }
 
-
-
-function showTab(tabIndex) {
-  const tabs = document.querySelectorAll('.tab');
-  tabs.forEach((tab, index) => {
-    if (index === tabIndex) {
-      tab.style.display = 'block';
-    } else {
-      tab.style.display = 'none';
-    }
-  });
-}
-
-showTab(0); // initially show the first tab

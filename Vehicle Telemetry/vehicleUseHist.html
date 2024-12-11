@@ -47,33 +47,38 @@
         still need search bar
         -->
         <section class="top-bar">
-        <!-- search bar here-->
-        <div class="overlap-magnifying-glass">
-          <input
-          type="text"
-          class="search-input"
-          placeholder="Search by Vehicle ID #"
-          />
-          <div class="magnifying-class-icon">🔍</div>
-        </div>
-        <!-- filter buttons start here--> 
-        <div class="filter-buttons">
-          <button class="filter-button" onclick="openFilterPopup()">
-            Station <span class="expand-arrow">▼</span>
-          </button>
-          <button class="filter-button" onclick="openDateFilterPopup()">
-            Date <span class="expand-arrow">▼</span>
-          </button>          
-        </div>
-        <!-- display active filters buttons here-->
-         <div class="filter-container">
+          <!-- search bar here-->
+          <div class="overlap-magnifying-glass">
+            <input
+            type="text"
+            class="search-input"
+            placeholder="Search by Vehicle ID #"
+            />
+            <div class="magnifying-class-icon">🔍</div>
+          </div>
+          <!-- filter buttons start here--> 
+          <div class="filter-buttons">
+            <button class="filter-button" onclick="openFilterPopup()">
+              Station <span class="expand-arrow">▼</span>
+            </button>
+            <button class="filter-button" onclick="openDateFilterPopup()">
+              Date <span class="expand-arrow">▼</span>
+            </button>          
+          </div>
+          <!-- display active filters buttons here-->
+          <div class="filter-container">
             <div class="active-filters" id=""active-filters>
 
             </div>
-         </div>
-      
-        <!-- tabs here likely-->
+          </div>
+        
+          <!-- tabs here likely-->
+          
         </section>
+        <div class="tab-content">
+          <button class="tab-button active-tab" onclick="showTab(0, event)">Route Tracking</button>
+          <button class="tab-button" onclick="showTab(1, event)">Maintenance & Use</button>
+        </div>
 
       </section>
       <!-- it may end up being helpful for use to make a separate title section but we will see-->
