@@ -159,12 +159,11 @@
             <button class="tab" onclick="openTab('routeTracking')">Route Tracking</button>
             <button class="tab active" onclick="openTab('maintenanceUse')">Maintenance & Use</button>
           </div> -->
-          <div class="tabs">
-            <button class="tab-button" onclick="showTab(0)">Route Tracking</button>
-            <button class="tab-button" onclick="showTab(1)">Maintenance & Use</button>
-          </div>
+          
 
           <div class="tab-content">
+            <button class="tab-button active-tab" onclick="showTab(0, event)">Route Tracking</button>
+            <button class="tab-button" onclick="showTab(1, event)">Maintenance & Use</button>
             <!-- Route Tracking -->
             <div class="tab" id="tab-0">
               <div id="dynamic-content" class="dynamic-content">
@@ -223,13 +222,23 @@
                 </div> <!-- end route tracking routes page -->
               </div>
               <div id="secondary-content" class="secondary-content">
-                <div class="vehicle-id">
-                  <h2>AUGHGHGHSJHF</h2>
+                <div class="secondary-content-container">
+                  <div class="vehicle-id">
+                    <h2>Vehicle #10156</h2>
+                  </div>
+                  <div class="image-container">
+                    <div class="map-image">
+                      <img src="../Images/map.png" alt="Route Map" />
+                    </div>
+                    <div class="route-timeline-image">
+                      <img src="../Images/route_timeline.png" alt="Route Timeline" />
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Maintenance & Use Content -->
-              <div class="tab" id="tab-1">
+              <div class="tab" id="tab-1" style="display:none">
                 <div class="vehicle-details-container">
                   <!-- Left Column -->
                   <div class="vehicle-layout">

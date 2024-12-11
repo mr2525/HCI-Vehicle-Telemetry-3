@@ -395,7 +395,6 @@ body {
   .tab-container {
     display: flex;
     margin-bottom: 20px;
-    margin-left: 10px;
   }
   
   .tab-button {
@@ -404,14 +403,24 @@ body {
     font-size: 16px;
     background-color: #b9b8b8;
     border: none;
-    margin-right: 10px;
+    margin-left: 10px;
     border-radius: 10px 10px 0 0; /* Round the top corners */
   }
 
   .tab-button:hover {
     background-color: #4e148c;
+    color: #ffffff;
   }
-  
+
+  .tab-button:active {
+    background-color: #4e148c;
+    color: #ffffff;
+  }
+
+  .active-tab {
+    background-color: #4e148c;
+    color: #ffffff;
+  }
 
   .tab-content {
     display: block; 
@@ -582,10 +591,6 @@ body {
     white-space: nowrap;
   }
 
-  .secondary-content {
-    display: none; /* Hidden by default */
-  }
-
   /*#endregion*/
 
   /*#region vtMaintUse*/
@@ -665,6 +670,45 @@ body {
   .vehicle-maintenance-history ul li {
     margin-bottom: 8px;
   }  
+  /*#endregion*/
+
+  /*#region route selected */
+  .secondary-content {
+    display: none; /* Hidden by default */
+  }
+
+  .secondary-content-container {
+    position: flex;
+    margin-left: 10px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: flex-start; /* Align the search bar to the far left */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .map-image img, .route-timeline-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+  }
+
+  /*
+  .map-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+  }
+
+  .route-timeline-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+  }
+    */
+
   /*#endregion*/
 
 /*#endregion*/

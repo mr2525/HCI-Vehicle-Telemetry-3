@@ -1,45 +1,53 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const routes = document.querySelectorAll(".route");
-    const dynamicContent = document.getElementById("dynamic-content");
-    const secondaryContent = document.getElementById("secondary-content");
+function showTab(tabIndex, evt) {
+  var i, x, tabbuttons;
+  x = document.getElementsByClassName("tab");
   
-    routes.forEach((route) => {
-      route.addEventListener("click", () => {
-        const routeId = route.dataset.id;
-  
-        // Update the dynamic content with the innerHTML of secondaryContent
-        dynamicContent.innerHTML = secondaryContent.innerHTML;
-  
-        // Optionally, you can add logic to customize the content based on routeId
-        // Example:
-        const vehicleIdElement = dynamicContent.querySelector(".vehicle-id h2");
-        if (vehicleIdElement) {
-          vehicleIdElement.textContent = `Vehicle #${routeId}`;
-        }
-  
-        // Hide the clicked route (optional)
-        route.style.display = "none";
-      });
-    });
-  });
-  
-
-  // Function to show secondary content
-  function showSecondaryContent(routeId) {
-    const secondaryContent = document.getElementById('secondary-content');
-    secondaryContent.style.display = 'block';
-    
-    const vehicleId = document.querySelector(`.route[data-id="${routeId}"] .vehicle-id h2`);
-    if (vehicleId) {
-      secondaryContent.querySelector('.vehicle-id h2').textContent = vehicleId.textContent;
-    }
+  // Hide all tabs
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
 
-  // Add event listeners to routes
-  document.querySelectorAll('.route').forEach(route => {
-    route.addEventListener('click', () => {
-      const routeId = route.getAttribute('data-id'); // Get route ID
-      showSecondaryContent(routeId); // Show the secondary content
+  // Select all buttons inside the .tabs container
+  tabbuttons = document.querySelectorAll(".tab-button");
+
+  // Remove 'active-tab' class from all tab buttons
+  for (i = 0; i < tabbuttons.length; i++) {
+    tabbuttons[i].classList.remove("active-tab");
+  }
+
+  // Show the selected tab
+  document.getElementById("tab-" + tabIndex).style.display = "block";
+
+  // Add 'active-tab' class to the clicked tab
+  evt.currentTarget.classList.add("active-tab");
+}
+
+
+
+// Dynamic content update logic
+document.addEventListener("DOMContentLoaded", () => {
+  const routes = document.querySelectorAll(".route");
+  const dynamicContent = document.getElementById("dynamic-content");
+  const secondaryContent = document.getElementById("secondary-content");
+
+  routes.forEach((route) => {
+    route.addEventListener("click", () => {
+      const routeId = route.dataset.id;
+
+      // Update the dynamic content with the innerHTML of secondaryContent
+      dynamicContent.innerHTML = secondaryContent.innerHTML;
+
+      // Customize content based on routeId
+      const vehicleIdElement = dynamicContent.querySelector(".vehicle-id h2");
+      if (vehicleIdElement) {
+        vehicleIdElement.textContent = `Vehicle #${routeId}`;
+      }
+
+      // Optionally hide the clicked route
+      route.style.display = "none";
+
+      // Switch to the Route Tracking tab
+      showTab(0);
     });
   });
-
+});
