@@ -162,6 +162,34 @@ body {
   background-color: #4e148c;
   color: white;
 }
+
+.vt-nav-links {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  left: 10px;
+  display: none;
+}
+
+.vt-nav-link {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 7px 20px;
+  font-size: 15px;
+  font-family: "Arial-Regular", Helvetica;
+  background-color: white;
+  margin-left: 40px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.vt-nav-link:hover, .vt-nav-link.active {
+  background-color: #4e148c;
+  opacity: 0.5;
+  color: white;
+}
   
 /*#endregion*/
     

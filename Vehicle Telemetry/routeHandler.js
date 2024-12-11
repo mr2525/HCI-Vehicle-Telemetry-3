@@ -34,11 +34,27 @@ document.addEventListener("DOMContentLoaded", () => {
       maintHistory.style.display = "block";
     });
   });
+  
+  const tabUseHistory = document.querySelectorAll(".vehicle-use-history");
+  const tabMaintHistory = document.querySelectorAll(".vehicle-maintenance-history")
 
-  // Initially set main_maintuse_content to be visible
-  main_maintuse_content.style.display = "block";
-  useHistory.style.display = "none";
-  maintHistory.style.display = "none";
+  tabUseHistory.forEach((item) => {
+    item.addEventListener("click", () => {
+      main_maintuse_content.style.display = "none";
+      useHistory.style.display = "block";
+      maintHistory.style.display = "none";
+    });
+  });
+
+  tabMaintHistory.forEach((item) => {
+    item.addEventListener("click", () => {
+      main_maintuse_content.style.display = "none";
+      useHistory.style.display = "none";
+      maintHistory.style.display = "block";
+    });
+  });
+  
+
 
 });
 
@@ -83,47 +99,11 @@ function showTab(tabIndex, evt) {
   // Add 'active-tab' class to the clicked tab
   evt.currentTarget.classList.add("active-tab");
 
-  //resetDynamicContent();
-}
-
-/*
-document.addEventListener("DOMContentLoaded", () => {
-  const routes = document.querySelectorAll(".route");
-  const dynamicContent = document.getElementById("dynamic-content");
-  const secondaryContent = document.getElementById("secondary-content");
-  const dynamicContentBackup = dynamicContent;
-
-  const main_maintuse_content = document.getElementById("dynamic-maint-use");
-
-  const listener_usehistory = document.querySelectorAll(".vehicle-use-history");
-  const useHistory = document.getElementById("use-history-content");
-
-  const listener_mainthistory = document.querySelectorAll(".vehicle-maintenance-history");
-  const maintHistory = document.getElementById("maint-history-content");
-
-  function resetDynamicContent() {
-    dynamicContent.innerHTML = "";
+  const vtNavLinks = document.querySelector(".vt-nav-links");
+  if (tabIndex === 1) {
+    vtNavLinks.style.display = "block"; // Show submenu for Maintenance & Use
+  } else {
+    vtNavLinks.style.display = "none"; // Hide submenu for other tabs
   }
-  
-  routes.forEach((route) => {
-    route.addEventListener("click", () => {
-      const routeId = route.dataset.id;
 
-      // Update the dynamic content with the innerHTML of secondaryContent
-      dynamicContent.innerHTML = secondaryContent.innerHTML;
-
-      // Customize content based on routeId
-      const vehicleIdElement = dynamicContent.querySelector(".vehicle-id h2");
-      if (vehicleIdElement) {
-        vehicleIdElement.textContent = `Vehicle #${routeId}`;
-      }
-
-      // Optionally hide the clicked route
-      route.style.display = "none";
-
-      // Switch to the Route Tracking tab
-      showTab(0, event);
-    });
-  });
-});
-*/
+}
