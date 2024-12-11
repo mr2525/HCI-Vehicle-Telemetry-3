@@ -65,31 +65,6 @@
                 Date <span class="expand-arrow">▼</span>
               </button>
             </div>
-            <div class="view-buttons">
-              <button class="square-button grid-view">
-                <!-- Button with 9 small squares -->
-                <div class="icon-grid">
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                </div>
-              </button>
-              <button class="square-button list-view">
-                <!-- Button with 3 horizontal rectangles -->
-                <div class="icon-list">
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                </div>
-              </button>
-            </div>
           </div> <!--top-bar-->
           <!-- Filter Buttons -->
           <div class="filter-container">
@@ -166,8 +141,8 @@
                   - Use History
                   - Maint History-->
           <div class="tab-content">
-            <button class="tab-button active-tab" onclick="showTab(0, event)">Route Tracking</button>
-            <button class="tab-button" onclick="showTab(1, event)">Maintenance & Use</button>
+            <button class="tab-button active-tab" onclick="showTab(0, event), routeBack(), maintUseBack()">Route Tracking</button>
+            <button class="tab-button" onclick="showTab(1, event), maintUseBack(), routeBack()">Maintenance & Use</button>
             
             <!-- Route Tracking -->
             <div class="tab" id="tab-0">
@@ -239,7 +214,7 @@
                       <img src="../Images/route_timeline.png" alt="Route Timeline" />
                     </div>
                   </div>
-                  <button class="close-button">Back</button>
+                  <button class="close-button" onclick="routeBack()">Back</button>
                 </div>
               </div>
 
@@ -364,7 +339,7 @@
                       </tr>
                      </tbody>
                   </table>
-                  <button class="close-button">Back</button>
+                  <button class="close-button" onclick="maintUseBack()">Back</button>
                 </div>
 
                 <!-- Maintenance History Page -->
@@ -424,7 +399,7 @@
                       </tr>
                      </tbody>
                   </table>
-                  <button class="close-button">Back</button>
+                  <button class="close-button" onclick="maintUseBack()">Back</button>
                 </div>
 
               </div> 

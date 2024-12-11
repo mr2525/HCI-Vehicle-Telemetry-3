@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const routes = document.querySelectorAll(".route");
   const dynamicContent = document.getElementById("dynamic-content");
   const secondaryContent = document.getElementById("secondary-content");
-  const dynamicContentBackup = dynamicContent;
 
   const main_maintuse_content = document.getElementById("dynamic-maint-use");
 
@@ -43,6 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+function maintUseBack() {
+  const main_maintuse_content = document.getElementById("dynamic-maint-use");
+  const useHistory = document.getElementById("use-history-content");
+  const maintHistory = document.getElementById("maint-history-content");
+
+  main_maintuse_content.style.display = "block";
+  useHistory.style.display = "none";
+  maintHistory.style.display = "none";
+}
+
+function routeBack() {
+  const routes = document.querySelectorAll(".route");
+  const dynamicContent = document.getElementById("dynamic-content");
+  const secondaryContent = document.getElementById("secondary-content");
+  dynamicContent.style.display = "block";
+  secondaryContent.style.display = "none";
+}
 
 function showTab(tabIndex, evt) {
   var i, x, tabbuttons;
@@ -67,7 +83,7 @@ function showTab(tabIndex, evt) {
   // Add 'active-tab' class to the clicked tab
   evt.currentTarget.classList.add("active-tab");
 
-  resetDynamicContent();
+  //resetDynamicContent();
 }
 
 /*
