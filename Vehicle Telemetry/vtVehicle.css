@@ -179,17 +179,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: left;
-<<<<<<< HEAD
   height: 30px;
-=======
-  height: 5px;
->>>>>>> a8eb430a92fb9898137b64a8f33ac107d206b0e3
   font-size: 15px;
   font-family: "Arial-Regular", Helvetica;
   background-color: white;
+  padding-left: 5px;
   margin-left: 40px;
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .vt-nav-link:hover, .vt-nav-link.active {
