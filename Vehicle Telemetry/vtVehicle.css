@@ -166,23 +166,27 @@ body {
 .vt-nav-links {
   list-style: none;
   padding: 0px;
-  margin: 0;
-  width: 100%;
+  margin: 0px;
+  width: 120%;
   left: 10px;
   display: none;
 }
 
 .vt-nav-link {
+  list-style: none;
   text-decoration: none;
   color: black;
-  display: block;
-  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 12px;
   font-size: 15px;
   font-family: "Arial-Regular", Helvetica;
   background-color: white;
   margin-left: 40px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+
 }
 
 .vt-nav-link:hover, .vt-nav-link.active {
@@ -199,7 +203,7 @@ body {
     overflow: scroll;
     width: 100%;
     height: 100%;
-    top: 100px;
+    top: 50px;
     left: 219px;
     position: fixed;
   }
@@ -248,7 +252,8 @@ body {
   .regional-manager .filter-button {
     height: 40px;
     padding: 0 20px;
-    background-color: orange;
+    background-color: #F96400;
+    opacity: 75%;
     color: white;
     border: none;
     border-radius: 20px;
@@ -262,7 +267,7 @@ body {
   }
     
   .regional-manager .filter-button:hover {
-    background-color: #e69500; /* Slightly darker orange on hover */
+    background-color: #a94b0c; /* Slightly darker orange on hover */
   }
     
   .regional-manager .expand-arrow {
@@ -340,7 +345,8 @@ body {
   }
 
   .regional-manager .filter-tag {
-    background-color: orange;
+    background-color: #F96400;
+    opacity: 75%;
     color: white;
     border: none;
     border-radius: 20px;
@@ -359,7 +365,7 @@ body {
   }
 
   .regional-manager .close-filter:hover {
-    color: #e69500; /* Lighter color on hover */
+    color: #555; /* Lighter color on hover */
   }
 
   /*#region RT and MU tabs*/

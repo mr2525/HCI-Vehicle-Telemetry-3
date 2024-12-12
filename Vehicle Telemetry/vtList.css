@@ -216,7 +216,8 @@ text-decoration: underline;
   .regional-manager .filter-button {
     height: 40px;
     padding: 0 20px;
-    background-color: orange;
+    background-color: #F96400;
+    opacity: 75%;
     color: white;
     border: none;
     border-radius: 20px;
@@ -230,7 +231,7 @@ text-decoration: underline;
   }
     
   .regional-manager .filter-button:hover {
-    background-color: #e69500; /* Slightly darker orange on hover */
+    background-color: #a94b0c; /* Slightly darker orange on hover */
   }
     
   .regional-manager .expand-arrow {
@@ -313,7 +314,8 @@ text-decoration: underline;
   }
 
   .regional-manager .filter-tag {
-    background-color: orange;
+    background-color: #F96400;
+    opacity: 75%;
     color: white;
     border: none;
     border-radius: 20px;
@@ -332,7 +334,7 @@ text-decoration: underline;
   }
 
   .regional-manager .close-filter:hover {
-    color: #e69500; /* Lighter color on hover */
+    color: #555; /* Lighter color on hover */
   }
 
 /* list view maintenance */
