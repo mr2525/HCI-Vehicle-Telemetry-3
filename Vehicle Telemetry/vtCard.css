@@ -403,17 +403,12 @@ body {
   }
 
   /* Specific Icon Colors */
-  .regional-manager .warning-icon {
-    width: 80%;
-  }
-
-  .regional-manager .caution-icon {
-    width: 80%;
-  }
-
+  .regional-manager .warning-icon,
+  .regional-manager .caution-icon,
   .regional-manager .normal-icon {
-    width: 80%;
+    width: 90px;
   }
+
 /*#endregion*/
 
 /*#region Filter functionailty */
