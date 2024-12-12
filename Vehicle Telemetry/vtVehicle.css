@@ -584,7 +584,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 600px;
+    max-width: 500px;
   }
   
   .vehicle-id h2 {
@@ -594,7 +594,7 @@ body {
   
   .vehicle-image img {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     border-radius: 8px;
   }
   
@@ -618,7 +618,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 600px;
+    max-width: 700px;
+    margin-top: 80px;
   }
   
   .vehicle-specs,
