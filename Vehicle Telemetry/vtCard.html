@@ -25,27 +25,13 @@
             <div class="text-wrapper-6">Regional Manager</div>
             </div>
           </div>
-          <a href="../Management Dashboard/Dashboard.html"> 
-                <div class="dashboard-tab"> 
-                <div class="div-wrapper">
-                    <div class="text-wrapper-5">Dashboard</div>
-                </div>
-                </div>
-          </a>
-          <a href="../Vehicle Telemetry/vtCard.html">
-                <div class="VT-tab">
-                <div class="overlap-2">
-                    <div class="text-wrapper-4">Vehicle Telemetry</div>
-                </div>
-                </div>
-          </a>
-          <a href="../Settings/settings.html">
-                <div class="settings">
-                <div class="div-wrapper-2">
-                    <div class="text-wrapper-3">Settings</div>
-                </div>
-                </div>
-           </a>  
+          <div class="tab-container">
+            <ul class="nav-links">
+                <li><a href="../Management Dashboard/Dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="../Vehicle Telemetry/vtCard.html" class="nav-link active">Vehicle Telemetry</a></li>
+                <li><a href="../Settings/settings.html" class="nav-link">Settings</a></li>
+            </ul>
+        </div> 
         </div>
         <div class="main_content">
           <div class="top-bar">
@@ -66,29 +52,33 @@
               </button>
             </div>
             <div class="view-buttons">
-              <button class="square-button grid-view">
-                <!-- Button with 9 small squares -->
-                <div class="icon-grid">
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                </div>
-              </button>
-              <button class="square-button list-view">
-                <!-- Button with 3 horizontal rectangles -->
-                <div class="icon-list">
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                </div>
-              </button>
+                <a href="./vtCard.html">
+                <button class="square-button grid-view active">
+                    <!-- Button with 9 small squares -->
+                    <div class="icon-grid">
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                    </div>
+                </button>
+                </a>
+                <a href="./vtList.html">
+                <button class="square-button list-view">
+                  <!-- Button with 3 horizontal rectangles -->
+                  <div class="icon-list">
+                    <div class="list-line"></div>
+                    <div class="list-line"></div>
+                    <div class="list-line"></div>
+                    <div class="list-line"></div>
+                  </div>
+                </button>
+                </a>
             </div>
           </div> <!--top-bar-->
           <!-- Filter Buttons -->
@@ -100,11 +90,15 @@
 
           <!-- Vehicle Cards -->
           <div class="vehicle-grid">
-            <div class="vehicle-card warning">
-              <div class="icon warning-icon">🚨</div>
-              <div class="vehicle-id">#10156</div>
-              <div class="vehicle-model">2024 Nissan Rouge</div>
-            </div>
+            <a href="./vtVehicle.html" class="vehicle-link">
+              <button class="vehicle-button">
+              <div class="vehicle-card warning">
+                <div class="icon warning-icon">🚨</div>
+                <div class="vehicle-id">#10156</div>
+                <div class="vehicle-model">2024 Nissan Rouge</div>
+              </div>
+              </button>
+            </a>
             <div class="vehicle-card warning">
               <div class="icon warning-icon">🚨</div>
               <div class="vehicle-id">#90456</div>

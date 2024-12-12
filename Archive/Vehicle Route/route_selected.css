@@ -1,168 +1,246 @@
+
 body {
   padding:0;
   margin:0; 
 }
 .regional-manager {
-background-color: #4e148c;
-display: flex;
-flex-direction: row;
-justify-content: center;
-width: 100%;
+    background-color: #4e148c;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
 
 .regional-manager .overlap-wholescreen {
-background-color: #ffffff;
-overflow: hidden;
-width: 100%;
-height: 100%;
-position: fixed;
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
 
 /*#region top banner*/
 
 /*top bar*/
 .regional-manager .top-banner {
-background-color: #4e148c;
-position: fixed;
-width: 100%;
-height: 100%;    
+  /*background-color: #4e148c;
+  position: fixed;
+  width: 100%;
+  height: 100%;    */
+  background-color: #4e148c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
       
 /*top bar container*/
 .regional-manager .overlap-group {
-position: relative;
-width: 100%;
-height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
     
 /*fedex pic*/
 .regional-manager .fedex-logo {
-position: relative;
-width: 240px;
-height: 100px;
-top: 0;
-left: 0;
-object-fit: cover;
+  position: relative;
+  width: 240px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 /*#endregion*/
   
 /*sidebar container*/
 .regional-manager .sidebar {
-background-color: #d9d9d9;
-width: 219px;
-height: 100%;
-top: 100px;
-position: fixed;
-display: flex;
-justify-content: center;
-flex-direction: column;
-overflow: hidden;
+    background-color: #d9d9d9;
+    width: 219px;
+    height: 100%;
+    top: 100px;
+    position: fixed;
+    left:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin;
 }
     
-/*profile*/
-/*#region profile + name*/
+  /*profile*/
+  /*#region profile + name*/
 .regional-manager .user-info {
-position: absolute;
-width: 219px;
-height: 100%;
-text-align: center;    
+      position: absolute;
+      width: 214px;
+      height: 100%;
+      text-align: center;
+    
 }
 
 .regional-manager .overlap-4 {
-position: absolute;
-width: 100%;
-height: 130px;
-top: 10px;       
+      position: absolute;
+      width: 100%;
+      height: 130px;
+      top: 10px;
+      
 }
 
 .regional-manager .user-image {
-position: relative;
-width: 170px;
-height: 130px;
-object-fit: cover;
+    position: relative;
+    width: 170px;
+    height: 130px;
+    object-fit: cover;
+      
 }
 
     
 .regional-manager .text-wrapper-7 {
-position: relative;
-width: 100%;
-top: 0;
-left: 0;
-font-family: "Arial-Regular", Helvetica;
-font-weight: 400;
-color: #000000;
-font-size: 24px;
-text-align: center;
-letter-spacing: 0;
-line-height: normal; 
+      position: relative;
+      width: 100%;
+      top: 0;
+      left: 0;
+      font-family: "Arial-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 0;
+      line-height: normal; 
 }
 /*#endregion*/
 
-/*#region position*/
+/*position*/
+/*#region*/
 .regional-manager .overlap-wrapper {
-position: absolute;
-width: 100%;
-height: 100%;
-top: 170px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 170px;
 }
 
 .regional-manager .overlap-3 {
-position: relative;
-width: 219px;
-height: 100%;
+      position: relative;
+      width: 219px;
+      height: 100%;
 }
       
 .regional-manager .text-wrapper-6 {
-position: relative;
-width: 100%;
-top: 0;
-left: 0;
-font-family: "Arial-Bold", Helvetica;
-font-weight: 700;
-color: #000000;
-font-size: 22px;
-text-align: center;
-letter-spacing: 0;
-line-height: normal;
-text-decoration: underline;
+      position: relative;
+      width: 100%;
+      top: 0;
+      left: 0;
+      font-family: "Arial-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 22px;
+      text-align: center;
+      letter-spacing: 0;
+      line-height: normal;
+      text-decoration: underline;
 }
     
 /*#endregion*/
     
-.tab-container {
-  position: absolute;
-  width: 100%;
-  height: 700px;
-  top: 210px;
-  left: 0;
+/*dash button*/
+/*#region*/
+.regional-manager .dashboard-tab {
+      position: absolute;
+      width: 100%;
+      height: 48px;
+      top: 220px;
+      left: 10px;
 }
-
-.nav-links {
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-  width: 100%;
+    
+.regional-manager .div-wrapper {
+      position: relative;
+      width: 212px;
+      height: 48px;
+      background-color: #4e148c;
 }
-
-.nav-link {
-  text-decoration: none;
-  color: black;
-  display: block;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-family: "Arial-Regular", Helvetica;
-  background-color: white;
-  margin-top: 3px;
-  margin-bottom: 3px;
+    
+.regional-manager .text-wrapper-5 {
+      position: relative;
+      width: 100%;
+      top: 12px;
+      left: 8px;
+      font-family: "Arial-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffffff;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
 }
+/*#endregion*/
 
-.nav-link:hover, .nav-link.active {
-  background-color: #4e148c;
-  color: white;
+/*settings word*/
+/*#region*/
+.regional-manager .settings {
+      position: absolute;
+      width: 100%;
+      height: 48px;
+      top: 270px;
+      left: 10px;
+}  
+    
+.regional-manager .div-wrapper-2 {
+      position: relative;
+      width: 212px;
+      height: 48px;
+      background-color: #ffffff;
 }
-  
-/*end region*/
+    
+.regional-manager .text-wrapper-3 {
+      position: absolute;
+      width: 94px;
+      top: 11px;
+      left: 8px;
+      font-family: "Arial-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: normal;
+}
+    /*#endregion*/
 
+    /*vehicle temematry button*/
+    /*#region*/
+    .regional-manager .VT-tab {
+      position: absolute;
+      width: 100%;
+      height: 48px;
+      top: 321px;
+      left: 10px;
+    }
+
+    .regional-manager .overlap-2 {
+      position: relative;
+      width: 212px;
+      height: 48px;
+      background-color: #ffffff;
+      
+    }  
+    
+    .regional-manager .text-wrapper-4 {
+      position: absolute;
+      width: 160px;
+      top: 12px;
+      left: 8px;
+      font-family: "Arial-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+    
+  /*#endregion*/
+    
   /*screen area with main info*/
   .regional-manager .main_content {
     background-color: #ffffff;
@@ -177,17 +255,28 @@ text-decoration: underline;
   
   .regional-manager .top-bar {
     display: flex;
+    flex-wrap:nowrap;
     justify-content: flex-start; /* Align the search bar to the far left */
     align-items: center;
     padding: 10px;
     gap: 10px; /* Space between search bar and filter buttons */
+    top: 10px;
+    width: 100%;
   }
+
     
   .regional-manager .overlap-magnifying-glass {
     position: relative;
     display: flex;
     align-items: center;
   }
+
+  /* Search bar */                     /*make changes if necessary*/
+.regional-manager .search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
     
   .regional-manager .search-input {
     width: 300px;
@@ -216,8 +305,7 @@ text-decoration: underline;
   .regional-manager .filter-button {
     height: 40px;
     padding: 0 20px;
-    background-color: #F96400;
-    opacity: 75%;
+    background-color: orange;
     color: white;
     border: none;
     border-radius: 20px;
@@ -231,7 +319,7 @@ text-decoration: underline;
   }
     
   .regional-manager .filter-button:hover {
-    background-color: #a94b0c; /* Slightly darker orange on hover */
+    background-color: #e69500; /* Slightly darker orange on hover */
   }
     
   .regional-manager .expand-arrow {
@@ -263,11 +351,6 @@ text-decoration: underline;
   .regional-manager .square-button:hover {
     background-color: #f0f0f0; /* Light gray on hover */
     border-color: #888; /* Darker border on hover */
-  }
-
-  .regional-manager .square-button.active {
-      background-color: #d9d9d9; /* Light gray for active button */
-      border-color: #000000; /* Slightly darker border */
   }
 
   /* Grid icon with 9 small squares */
@@ -314,8 +397,7 @@ text-decoration: underline;
   }
 
   .regional-manager .filter-tag {
-    background-color: #F96400;
-    opacity: 75%;
+    background-color: orange;
     color: white;
     border: none;
     border-radius: 20px;
@@ -334,7 +416,7 @@ text-decoration: underline;
   }
 
   .regional-manager .close-filter:hover {
-    color: #555; /* Lighter color on hover */
+    color: #e69500; /* Lighter color on hover */
   }
 
 /* list view maintenance */
@@ -386,10 +468,6 @@ background-color: #fff;
 border-radius: 5px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 margin-bottom: 10px;
-}
-
-.vehicle-link {
-  text-decoration: none;
 }
     
 .card-item {
@@ -590,3 +668,80 @@ display: block;
 }
 
 /*#endregion*/
+
+
+.tab {
+  left: 10px;
+  padding: 20px 20px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.tab.active {
+  background-color: #4e148c;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-container {
+  width: 60%;
+  position: relative;
+}
+
+.map {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.timeline {
+  margin: 20px 0;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 29px; /* Aligns the line beside circles */
+  width: 4px;
+  height: 100%;
+  background-color: #000;
+}
+
+
+.timeline-event {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+
+.event-details {
+  line-height: 1.2;
+}

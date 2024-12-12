@@ -1,9 +1,9 @@
 .regional-manager {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    overflow-y: auto;
+    overflow:hidden;
 }
 
 .regional-manager .div {
@@ -15,26 +15,30 @@
 }
 
 .regional-manager .top-banner {
-  position: absolute;
-  width: 1610px;
+  position: relative;
+  width: 1630px;
   height: 130px;
   top: 0;
   left: 0;
+  z-index:1
 }
 
 .regional-manager .overlap-group {
   position: relative;
   height: 130px;
+  width: 100%
 }
 
-.regional-manager .purple {
-  position: absolute;
-  width: 1440px;
-  height: 130px;
+.purple {
+  position: absolute; 
+  width: 100vw; 
+  height: 130px; 
   top: 0;
-  left: 170px;
-  background-color: #4e148c;
+  left: 0;
+  background-color: #4e148c; 
+  z-index: -1; 
 }
+
 
 .regional-manager .fedex-logo {
   position: absolute;
@@ -49,8 +53,8 @@
   position: absolute;
   width: 178px;
   height: 69px;
-  top: 30px;
-  left: 1300px;
+  top: 35px;
+  left: 2085px;
 }
 
 .regional-manager .text-wrapper {
@@ -95,12 +99,13 @@
 }
 
 .regional-manager .sidebar {
-  position: absolute;
-  width: 217px;
-  height: 894px;
-  top: 0;
-  left: 0;
-  background-color: #d9d9d9;
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    background-color: #d9d9d9;
+    z-index: -1;
 }
 
 .regional-manager .settings {
@@ -259,7 +264,7 @@
   width: 34px;
   height: 861px;
   top: 130px;
-  left: 1485px;
+  right: 0;
   background-color: #d9d9d9;
 }
 
@@ -761,26 +766,22 @@
   white-space: nowrap;
 }
 
-.regional-manager .route-2 {
-  position: absolute;
-  width: 1225px;
-  height: 99px;
-  top: 577px;
-  left: 241px;
-}
-
-.regional-manager .route-3 {
-  position: absolute;
-  width: 1225px;
-  height: 99px;
-  top: 718px;
-  left: 241px;
-}
-
+.regional-manager .route,
+.regional-manager .route-2,
+.regional-manager .route-3,
 .regional-manager .route-4 {
-  position: absolute;
-  width: 1225px;
-  height: 99px;
-  top: 859px;
-  left: 241px;
+  position: relative; /* Relative positioning ensures proper layout */
+  width: calc(100% - 240px); /* Adjust width to fit content area minus sidebar */
+  height: 99px; /* Consistent height for rows */
+  background-color: #d9d9d9; /* Background for row visibility */
+  display: flex; /* Use flexbox for consistent alignment */
+  align-items: center; /* Center content vertically */
+  padding: 0 20px; /* Add padding inside rows */
+  margin-left: 240px; /* Offset to align with the content area */
+  margin-top: 20px; /* Space between rows for even vertical alignment */
+  box-sizing: border-box; /* Include padding and borders in width */
+  border-radius: 5px; /* Optional: Round the corners for better aesthetics */
 }
+
+
+

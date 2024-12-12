@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fedex Vehicle Telemetry</title>
+    <link rel="stylesheet" href="route_selected.css" />
+  </head>
+  <body>
+    <div class="regional-manager">
+      <div class="overlap-wholescreen">
+        <div class="top-banner">
+          <div class="overlap-group">
+            <img class="fedex-logo" src="../Images/FedEx-Logo-Square.png" />
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="user-info">
+            <div class="overlap-4">
+              <img class="user-image" src="../Images/Fillis.png" />
+              <div class="text-wrapper-7">Hello, Fillis!</div>
+            </div>
+          </div>
+          <div class="overlap-wrapper">
+            <div class="overlap-3">
+            <div class="text-wrapper-6">Regional Manager</div>
+            </div>
+          </div>
+          <a href="../Management Dashboard/Dashboard.html"> 
+                <div class="dashboard-tab"> 
+                <div class="div-wrapper">
+                    <div class="text-wrapper-5">Dashboard</div>
+                </div>
+                </div>
+          </a>
+          <a href="../Settings/settings.html">
+                <div class="settings">
+                <div class="div-wrapper-2">
+                    <div class="text-wrapper-3">Settings</div>
+                </div>
+                </div>
+          </a>  
+          <a href="../Vehicle Telemetry/vtCard.html">
+                <div class="VT-tab">
+                <div class="overlap-2">
+                    <div class="text-wrapper-4">Vehicle Telemetry</div>
+                </div>
+                </div>
+          </a>
+        </div>
+        <div class="main_content">
+          <div class="top-bar">
+            <div class="overlap-magnifying-glass">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search by Vehicle ID #"
+              />
+              <div class="magnifying-glass-icon">🔍</div>
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-button" onclick="openFilterPopup()">
+                Station <span class="expand-arrow">▼</span>
+              </button>
+              <button class="filter-button" onclick="openDateFilterPopup()">
+                Date <span class="expand-arrow">▼</span>
+              </button>
+            </div>
+          
+
+
+          <!-- Filter Buttons -->
+          <div class="filter-container">
+            <div class="active-filters">
+              
+            </div>
+          </div>
+ 
+
+          <!-- Station filter pop-up -->
+          <div class="filter-popup" id="filterPopup">
+            <div class="popup-header">
+              <span class="popup-title">Station Filter</span>
+              <button class="close-popup" onclick="closeFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="region">Region:</label>
+              <select id="region">
+                <option value="Eastern">Eastern</option>
+                <option value="Western">Western</option>
+
+                <!-- Add more regions as needed -->
+              </select>
+              <label for="district">District:</label>
+              <select id="district">
+                <option value="Founders">Founders</option>
+                <option value="Pioneers">Pioneers</option>
+                <!-- Add more districts as needed -->
+              </select>
+              <label for="state">State:</label>
+              <select id="state">
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="California">California</option>
+                <!-- Add more states as needed -->
+              </select>
+              <label for="station">Station:</label>
+              <select id="station">
+                <option value="OWDA">OWDA</option>
+                <option value="CEFA">CEFA</option>
+                <option value="BOSA">BOSA</option>
+              </select>
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyFilters()">Apply</button>
+              <button onclick="closeFilterPopup()">Cancel</button>
+            </div>
+          </div> <!-- end filter pop-up -->
+
+          <!-- Date Filter Popup -->
+          <div id="dateFilterPopup" class="filter-popup hidden">
+            <div class="popup-header">
+              <span class="popup-title">Date Filter</span>
+              <button class="close-popup" onclick="closeDateFilterPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+              <label for="startDate">Start Date:</label>
+              <input type="date" id="startDate" />
+              <label for="endDate">End Date:</label>
+              <input type="date" id="endDate" />
+            </div>
+            <div class="popup-footer">
+              <button onclick="applyDateFilters()">Apply</button>
+              <button onclick="closeDateFilterPopup()">Cancel</button>
+            </div>
+          </div>
+
+          <script src="vehicleRouteFilter.js"></script>  
+
+          <!--<div class="map-container">
+            Vehicle #10156
+            <img
+              src="../Images/vtRouteTrackingMap.png"
+              width="550"
+              height="550"
+              down=""
+              left=""-->
+
+              <div class="container">
+                <div class="tabs">
+                    <button class="tab active" onclick="showTab('route-tracking')">Route Tracking</button>
+                    <button class="tab" onclick="showTab('maintenance-use')">Maintenance & Use</button>
+                </div>
+        
+                <div id="route-tracking" class="tab-content active">
+                    <h1>Vehicle #10156</h1>
+                    <div class="content-container">
+                        <div class="map-container">
+                            <img src="../Images/vtRouteTrackingMap.png" alt="Route Map" class="map">
+                        </div>
+                        <div class="timeline">
+                          <div class="timeline-line"></div>
+                            <div class="timeline-event">
+                                <div class="circle"></div>
+                                <div class="event-details">
+                                    <p>12:00</p>
+                                    <p>Station departure</p>
+                                    <p>12 miles</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event">
+                                <div class="circle"></div>
+                                <div class="event-details">
+                                    <p>12:15</p>
+                                    <p>Stop 1 - Time elapsed 0:10</p>
+                                    <p>12 miles</p>
+                                </div>
+                            </div>
+                            <div class="timeline-event">
+                                <div class="circle"></div>
+                                <div class="event-details">
+                                    <p>12:45</p>
+                                    <p>Stop 2 - Time elapsed 0:05</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                          
+                          
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="maintenance-use" class="tab-content">
+                    <h1>Maintenance & Use</h1>
+                    <p>Maintenance data goes here.</p>
+                </div>
+            </div>
+
+
+            ></img>
+          </div>           
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!--Trying to so map section for testing purposes-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Telemetry</title>
+    <link rel="stylesheet" href="route_selected.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('route-tracking')">Route Tracking</button>
+            <button class="tab" onclick="showTab('maintenance-use')">Maintenance & Use</button>
+        </div>
+
+        <div id="route-tracking" class="tab-content active">
+            <h1>Vehicle #10156</h1>
+            <div class="content-container">
+                <div class="map-container">
+                    <img src="../Images/vtRouteTrackingMap.png" alt="Route Map" class="map">
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <div class="circle"></div>
+                        <div class="event-details">
+                            <p>12:00</p>
+                            <p>Station departure</p>
+                            <p>12 miles</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="circle"></div>
+                        <div class="event-details">
+                            <p>12:15</p>
+                            <p>Stop 1 - Time elapsed 0:10</p>
+                            <p>12 miles</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="circle"></div>
+                        <div class="event-details">
+                            <p>12:45</p>
+                            <p>Stop 2 - Time elapsed 0:05</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="maintenance-use" class="tab-content">
+            <h1>Maintenance & Use</h1>
+            <p>Maintenance data goes here.</p>
+        </div>
+    </div>
+
+    <script src="vehicleRouteFilter.js"></script>
+</body>
+</html>-->
+

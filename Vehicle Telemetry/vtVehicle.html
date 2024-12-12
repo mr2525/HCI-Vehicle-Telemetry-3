@@ -25,27 +25,17 @@
             <div class="text-wrapper-6">Regional Manager</div>
             </div>
           </div>
-          <a href="../Management Dashboard/Dashboard.html"> 
-                <div class="dashboard-tab"> 
-                <div class="div-wrapper">
-                    <div class="text-wrapper-5">Dashboard</div>
-                </div>
-                </div>
-          </a>
-          <a href="../Settings/settings.html">
-                <div class="settings">
-                <div class="div-wrapper-2">
-                    <div class="text-wrapper-3">Settings</div>
-                </div>
-                </div>
-          </a>  
-          <a href="../Vehicle Telemetry/vtCard.html">
-                <div class="VT-tab">
-                <div class="overlap-2">
-                    <div class="text-wrapper-4">Vehicle Telemetry</div>
-                </div>
-                </div>
-          </a>
+          <div class="tab-container">
+            <ul class="nav-links">
+                <li><a href="../Management Dashboard/Dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="../Vehicle Telemetry/vtCard.html" class="nav-link active">Vehicle Telemetry</a></li>
+                <ul class = "vt-nav-links">
+                  <li class="vt-nav-link vt-nav-use-history">Use History</li>
+                  <li class="vt-nav-link vt-nav-maint-history">Maintenance History</li>
+                </ul>
+                <li><a href="../Settings/settings.html" class="nav-link">Settings</a></li>
+            </ul>
+          </div>
         </div>
         <div class="main_content">
           <div class="top-bar">
@@ -65,39 +55,11 @@
                 Date <span class="expand-arrow">▼</span>
               </button>
             </div>
-            <div class="view-buttons">
-              <button class="square-button grid-view">
-                <!-- Button with 9 small squares -->
-                <div class="icon-grid">
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                </div>
-              </button>
-              <button class="square-button list-view">
-                <!-- Button with 3 horizontal rectangles -->
-                <div class="icon-list">
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                  <div class="list-line"></div>
-                </div>
-              </button>
-            </div>
           </div> <!--top-bar-->
           <!-- Filter Buttons -->
           <div class="filter-container">
             <div class="active-filters">
-              <button class="filter-tag">Eastern <span class="close-filter">✖</span></button>
-              <button class="filter-tag">Founders <span class="close-filter">✖</span></button>
-              <button class="filter-tag">Massachusetts <span class="close-filter">✖</span></button>
-              <button class="filter-tag">OWDA <span class="close-filter">✖</span></button>
+              
             </div>
           </div>
 
@@ -157,86 +119,283 @@
             </div>
           </div> <!-- END Station filter pop-up -->
 
+
+
+
+
           <!-- Route Tracking and Maintenance & Use Tabs 
-          <div class="tab-container">
-            <button class="tab" onclick="openTab('routeTracking')">Route Tracking</button>
-            <button class="tab active" onclick="openTab('maintenanceUse')">Maintenance & Use</button>
-          </div> -->
-          <div class="tabs">
-            <button class="tab-button" onclick="showTab(0)">Route Tracking</button>
-            <button class="tab-button" onclick="showTab(1)">Maintenance & Use</button>
-          </div>
-
-          <!-- Route Tracking -->
+              Includes
+                - Route Tracking
+                  - Route Selected
+                - Maintenance & Use
+                  - Use History
+                  - Maint History-->
           <div class="tab-content">
+            <button class="tab-button active-tab" onclick="showTab(0, event), routeBack(), maintUseBack()">Route Tracking</button>
+            <button class="tab-button" onclick="showTab(1, event), maintUseBack(), routeBack()">Maintenance & Use</button>
+            
+            <!-- Route Tracking -->
             <div class="tab" id="tab-0">
-              <h2>Content for Route tracking</h2>
-              <p>This is the content displayed when Tab 1 is active.</p>
-            </div> <!-- end route tracking -->
-
-            <!-- Maintenance & Use Content -->
-            <div class="tab" id="tab-1">
-              <div class="vehicle-details-container">
-                <!-- Left Column -->
-                <div class="vehicle-layout">
-                  <div class="left-column">
-                    <!-- Vehicle Number -->
-                    <div class="vehicle-id">
-                      <h2>Vehicle #10156</h2>
-                    </div>
-                    <!-- Vehicle Image -->
-                    <div class="vehicle-image">
-                      <img src="../Images/fedex-truck.png" alt="FedEx Truck" />
-                    </div>
-                    <!-- Alerts -->
-                    <div class="vehicle-alerts">
-                      <h3>Alerts</h3>
-                      <p>⚠️ Engine check required!</p>
-                      <p>🚨 Oil change overdue!</p>
-                    </div>
-                    <!-- Current Maintenance -->
-                    <div class="current-maintenance">
-                      <h3>Current Maintenance</h3>
-                      <p>Engine tune-up in progress</p>
-                      <p>Last updated: 12/06/2024</p>
+              <div id="dynamic-content" class="dynamic-content">
+                <div class="route-container"
+                  <div class="vehicle-id">
+                    <h2>Vehicle #10156</h2>
+                  </div>
+                  <div class="route" data-id="10156">
+                    <div class="div-2">
+                      <div class="text-wrapper-13">Driver: Felix Monaghan</div>
+                      <div class="text-wrapper-14">Station: OWDA</div>
+                      <div class="state">State: MA</div>
+                      <div class="district">District: Founders</div>
+                      <div class="region">Region: Eastern</div>
+                      <div class="text-wrapper-15">Date: 11/10/2024</div>
+                      <div class="text-wrapper-16">Start Time: 03:00 PM</div>
+                      <div class="text-wrapper-17">End Time:</div>
                     </div>
                   </div>
-              
-                  <!-- Right Column -->
-                  <div class="right-column">
-                    <!-- Vehicle Specs -->
-                    <div class="vehicle-specs">
-                      <h3>Vehicle Specifications</h3>
-                      <ul>
-                        <li>Model: 2024 Nissan Rogue</li>
-                        <li>VIN: 5N1AT2MV4LC123456</li>
-                        <li>Mileage: 24,500 miles</li>
-                        <li>Fuel Type: Gasoline</li>
-                      </ul>
-                    </div>
-                    <!-- Vehicle Use History -->
-                    <div class="vehicle-use-history">
-                      <h3>Vehicle Use History</h3>
-                      <ul>
-                        <li>12/01/2024: Delivered 200 packages</li>
-                        <li>11/29/2024: Maintenance scheduled</li>
-                        <li>11/25/2024: 300-mile route completed</li>
-                      </ul>
-                    </div>
-                    <!-- Vehicle Maintenance History -->
-                    <div class="vehicle-maintenance-history">
-                      <h3>Maintenance History</h3>
-                      <ul>
-                        <li>11/20/2024: Tire rotation</li>
-                        <li>11/10/2024: Oil change</li>
-                        <li>10/30/2024: Brake pad replacement</li>
-                      </ul>
+                  <div class="route-2">
+                    <div class="div-2">
+                      <div class="text-wrapper-13">Driver: Felix Monaghan</div>
+                      <div class="text-wrapper-14">Station: OWDA</div>
+                      <div class="state">State: MA</div>
+                      <div class="district">District: Founders</div>
+                      <div class="region">Region: Eastern</div>
+                      <div class="text-wrapper-15">Date: 11/10/2024</div>
+                      <div class="text-wrapper-16">Start Time: 06:30 AM</div>
+                      <div class="text-wrapper-17">End Time:</div>
                     </div>
                   </div>
+                  <div class="route-3">
+                    <div class="div-2">
+                      <div class="text-wrapper-13">Driver: Felix Monaghan</div>
+                      <div class="text-wrapper-14">Station: OWDA</div>
+                      <div class="state">State: MA</div>
+                      <div class="district">District: Founders</div>
+                      <div class="region">Region: Eastern</div>
+                      <div class="text-wrapper-15">Date: 11/09/2024</div>
+                      <div class="text-wrapper-16">Start Time: 06:30 AM</div>
+                      <div class="text-wrapper-17">End Time:</div>
+                    </div>
+                  </div>
+                  <div class="route-4">
+                    <div class="div-2">
+                      <div class="text-wrapper-13">Driver: Felix Monaghan</div>
+                      <div class="text-wrapper-14">Station: OWDA</div>
+                      <div class="state">State: MA</div>
+                      <div class="district">District: Founders</div>
+                      <div class="region">Region: Eastern</div>
+                      <div class="text-wrapper-15">Date: 11/08/2024</div>
+                      <div class="text-wrapper-16">Start Time: 06:30 AM</div>
+                      <div class="text-wrapper-17">End Time:</div>
+                    </div>
+                  </div>
+                </div> <!-- end route tracking routes page -->
+              </div>
+              <div id="secondary-content" class="secondary-content">
+                <div class="secondary-content-container">
+                  <div class="vehicle-id">
+                    <h2>Vehicle #10156</h2>
+                  </div>
+                  <div class="image-container">
+                    <div class="map-image">
+                      <img src="../Images/map.png" alt="Route Map" />
+                    </div>
+                    <div class="route-timeline-image">
+                      <img src="../Images/route_timeline.png" alt="Route Timeline" />
+                    </div>
+                  </div>
+                  <button class="close-button" onclick="routeBack()">Back</button>
                 </div>
-              </div>  
-            </div> <!-- end maintanence -->
+              </div>
+
+              <!-- Maintenance & Use Content -->
+              <div class="tab" id="tab-1" style="display:none">
+                <div id="dynamic-maint-use" class="dynamic-maint-use">
+                  <div class="vehicle-details-container">
+                    <!-- Left Column -->
+                    <div class="vehicle-layout">
+                      <div class="left-column">
+                        <!-- Vehicle Number -->
+                        <div class="vehicle-id">
+                          <h2>Vehicle #10156</h2>
+                        </div>
+                        <!-- Vehicle Image -->
+                        <div class="vehicle-image">
+                          <img src="../Images/fedex-truck.png" alt="FedEx Truck" />
+                        </div>
+                        <!-- Alerts -->
+                        <div class="vehicle-alerts">
+                          <h3>Alerts</h3>
+                          <p>⚠️ Engine check required!</p>
+                          <p>🚨 Oil change overdue!</p>
+                        </div>
+                        <!-- Current Maintenance -->
+                        <div class="current-maintenance">
+                          <h3>Current Maintenance</h3>
+                          <p>Engine tune-up in progress</p>
+                          <p>Last updated: 12/06/2024</p>
+                        </div>
+                      </div>
+                  
+                      <!-- Right Column -->
+                      <div class="right-column">
+                        <!-- Vehicle Specs -->
+                        <div class="vehicle-specs">
+                          <h3>Vehicle Specifications</h3>
+                          <ul>
+                            <li>Model: 2024 Nissan Rogue</li>
+                            <li>VIN: 5N1AT2MV4LC123456</li>
+                            <li>Mileage: 24,500 miles</li>
+                            <li>Fuel Type: Gasoline</li>
+                          </ul>
+                        </div>
+                        <!-- Vehicle Use History -->
+                        <div class="vehicle-use-history">
+                          <h3>Vehicle Use History</h3>
+                          <ul>
+                            <li>12/01/2024: Delivered 200 packages</li>
+                            <li>11/29/2024: Maintenance scheduled</li>
+                            <li>11/25/2024: 300-mile route completed</li>
+                          </ul>
+                        </div>
+                        <!-- Vehicle Maintenance History -->
+                        <div class="vehicle-maintenance-history">
+                          <h3>Maintenance History</h3>
+                          <ul>
+                            <li>11/20/2024: Tire rotation</li>
+                            <li>11/10/2024: Oil change</li>
+                            <li>10/30/2024: Brake pad replacement</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>  <!-- end maintanence -->
+
+                <!-- Use History Page -->
+                <div id="use-history-content" class="use-history-content">
+                  <div class="table_title_container">
+                    <div class="use_image">
+                      <img src="../Images/Vehicle Use Icon.png"
+                      width="60"
+                      height="60"/>
+                    </div>
+                    <div class="table_title">
+                      Vehicle Use History
+                    </div>
+                  </div>
+                  <!-- insert the table info here-->
+                  <table class="table-container">
+                    <!-- table header -->
+                     <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Vehicle</th>
+                        <th>Station</th>
+                        <th>Notes</th>
+                      </tr>
+                     </thead>
+                     <!-- t body info-->
+                     <tbody>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert station here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert station here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert station here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert station here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert station here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                     </tbody>
+                  </table>
+                  <button class="close-button" onclick="maintUseBack()">Back</button>
+                </div>
+
+                <!-- Maintenance History Page -->
+                <div id="maint-history-content" class="maint-history-content">
+                  <div class="table_title_container">
+                    <div class="use_image">
+                      <img src="../Images/Vehicle Maintenance Icon.png"
+                      width="60"
+                      height="60"/>
+                    </div>
+                    <div class="table_title">
+                      Vehicle Maintenance History
+                    </div>
+                  </div>
+                  <!-- insert the table info here-->
+                  <table class="table-container">
+                    <!-- table header -->
+                     <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Vehicle</th>
+                        <th>Category</th>
+                        <th>Notes</th>
+                      </tr>
+                     </thead>
+                     <!-- t body info-->
+                     <tbody>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert category here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert category here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert category here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert category here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                      <tr>
+                        <td>2024-10-29</td>
+                        <td>insert ID here</td>
+                        <td>insert category here</td>
+                        <td>any additional notes</td>
+                      </tr>
+                     </tbody>
+                  </table>
+                  <button class="close-button" onclick="maintUseBack()">Back</button>
+                </div>
+
+              </div> 
+            </div>
           </div>
+          <script src="routeHandler.js"></script>
           <script src="stationFilter.js"></script>  <!--be sure to update location to where ever stationFilter.js ends up -->
         </div> <!-- end main content -->
       </div>
