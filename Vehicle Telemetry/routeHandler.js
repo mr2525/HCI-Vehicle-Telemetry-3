@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  const tabUseHistory = document.querySelectorAll(".vehicle-use-history");
-  const tabMaintHistory = document.querySelectorAll(".vehicle-maintenance-history")
+  const tabUseHistory = document.querySelectorAll(".vt-nav-use-history");
+  const tabMaintHistory = document.querySelectorAll(".vt-nav-maint-history")
 
   tabUseHistory.forEach((item) => {
     item.addEventListener("click", () => {
@@ -69,7 +69,6 @@ function maintUseBack() {
 }
 
 function routeBack() {
-  const routes = document.querySelectorAll(".route");
   const dynamicContent = document.getElementById("dynamic-content");
   const secondaryContent = document.getElementById("secondary-content");
   dynamicContent.style.display = "block";
