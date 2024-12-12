@@ -390,6 +390,7 @@ margin-bottom: 10px;
 
 .vehicle-link {
   text-decoration: none;
+  color:#000000;
 }
     
 .card-item {
@@ -398,6 +399,7 @@ font-size: 14px;
 margin: 5px 0;
 min-width: 150px; /* Ensures proper spacing */
 text-align: left;
+text-decoration: none;
 }
     
 .maintenance-card span:first-child {
