@@ -398,21 +398,17 @@ body {
   }
 
   .regional-manager .normal {
-    background-color: #e6ffe6;
+    /*background-color: #e6ffe6;*/
+    background-color: #dedede
   }
 
   /* Specific Icon Colors */
-  .regional-manager .warning-icon {
-    color: red;
-  }
-
-  .regional-manager .caution-icon {
-    color: orange;
-  }
-
+  .regional-manager .warning-icon,
+  .regional-manager .caution-icon,
   .regional-manager .normal-icon {
-    color: green;
+    width: 90px;
   }
+
 /*#endregion*/
 
 /*#region Filter functionailty */
