@@ -346,6 +346,10 @@ body, html {
     text-align: center;
   }
 
+  .metric-bar-graph {
+    height: 500px;
+  }
+
 /*#region Filter functionailty */
 .filter-popup {
   position: fixed;

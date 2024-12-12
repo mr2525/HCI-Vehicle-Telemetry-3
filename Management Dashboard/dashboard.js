@@ -3,9 +3,9 @@ const maintenanceData = {
     labels: ['Good', 'Moderate', 'Urgent'],
     datasets: [{
         label: 'Vehicle Maintenance',
-        data: [50, 30, 70], // Pie chart data (values for each section)
-        backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(255, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'], // Correct background colors
-        borderColor: ['rgba(0, 0, 255, 1)', 'rgba(255, 255, 0, 1)', 'rgba(255, 0, 0, 1)'], // Correct border colors
+        data: [50, 30, 3], // Pie chart data (values for each section)
+        backgroundColor: ['rgba(70, 200, 70, 1)', 'rgba(255, 255, 0, 1)', 'rgba(255, 0, 0, 1)'], // Correct background colors
+        borderColor: ['rgba(70, 200, 70, 1)', 'rgba(255, 255, 0, 1)', 'rgba(255, 0, 0, 1)'], // Correct border colors
         borderWidth: 1
     }]
 };
@@ -38,6 +38,7 @@ const metricsData = {
 };
 
 // Config for Vehicle Average Metrics Graph (Box Plot)
+/*
 const metricsConfig = {
     type: 'boxplot',  // Set chart type to 'boxplot'
     data: metricsData,
@@ -61,12 +62,13 @@ const metricsConfig = {
         }
     }
 };
+*/
 
 // Initialize the charts
 window.onload = function() {
     const maintenanceCtx = document.getElementById('maintenanceChart').getContext('2d');
     new Chart(maintenanceCtx, maintenanceConfig);
 
-    const metricsCtx = document.getElementById('metricsChart').getContext('2d');
-    new Chart(metricsCtx, metricsConfig);
+    //const metricsCtx = document.getElementById('metricsChart').getContext('2d');
+    //new Chart(metricsCtx, metricsConfig);
 };
