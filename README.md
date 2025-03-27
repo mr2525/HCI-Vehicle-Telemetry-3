@@ -4,7 +4,7 @@ This is the website version of our vehicle telemetry project. The primary object
 Goal: Our main goal was to make this website easy to navigate through and use while also keeping an aesthetic appeal in order to aid in clarity. We intended for this to provide easy access to information a user may want to access. 
 
 ## Document Outline
-###A. Manager Dashboard  
+### A. Manager Dashboard  
 Functions:  
 Shows a pop-up for vehicle maintenance and vehicle average metrics.
 Select the station and date on which the user would like to view.
@@ -13,7 +13,7 @@ View the bar and navigate to other tabs if needed.
 Summary: 
 The manager dashboard provides a very quick overview of a selected station and information from a specified date range.
 
-###B. Vehicle Telemetry
+### B. Vehicle Telemetry
 Functions:
 Choose between two different views (card view and list view).
 Click on vehicles to view vehicle specifics.
@@ -24,7 +24,7 @@ The ordered appearance of vehicles shown is also based on the priority of mainte
 Summary:
 Our vehicle telemetry screen gives two color-coded view options for a user to choose from: a list of all the vehicles and a card view of all the vehicles. The colors applied to each vehicle is dictated based on the urgency of maintenance alerts, if any are present. The default color is green for a vehicle in working condition, yellow for vehicles with mid-tier maintenance urgency alerts, and red for vehicles that are of high priority and need urgent attention. A user will be able to filter for a specific station and dates in addition to searching by a specified vehicle.
 
-###C. Route Tracking 
+### C. Route Tracking 
 Functions: 
 Show user vehicle information on where the vehicle has been, along with start-stop times and other station information.
 Filter out by station and dates when in the vehicle profile.
@@ -32,7 +32,7 @@ Switch to a map view that shows station departure along with stops.
 Summary: 
 The Route Tracking view is specifically for when a user wants to see where a vehicle has been and view the stops of a previous route with additional information in regard to idle time, time elapsed at a stop, etc. 
 
-###D. Maintenance and Use
+### D. Maintenance and Use
 Functions:
 Shows the user what the vehicle looks like along with any current maintenance alerts and when those occurred.
 Specifies the make, model, technology, and driver of the car.
@@ -43,7 +43,7 @@ If the user clicks on maintenance history on the sidebar, it will also show a li
 Summary:
 The maintenance and use history views will show previous maintenance along with average metrics in regard to the use of a vehicle. The use history is primarily intended for instances where the user may want to see the updated use averages when the car’s information is getting updated. The maintenance view will display things like maintenance alerts and when/if they were resolved. 
 
-###E. Settings
+### E. Settings
 Functions:
 Personal Info: Set profile picture, name, position, phone number, and email. Edit information as needed.
 Login and Security: Display username, password, and security code discreetly. Edit security questions and login details.
